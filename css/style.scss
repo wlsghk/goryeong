@@ -1564,8 +1564,8 @@ span {
 
     // 갤러리
     .gallery-title {
-        i {
-            font-size: 26px;
+        h3 {
+            font-size: 5.00vw;
         }
     }
 
@@ -1578,10 +1578,8 @@ span {
 
         .swiper-button-right,
         .swiper-button-left {
-            img {
-                width: 23.5px;
-                height: 23.5px;
-            }
+            width: 8.33vw;
+            height: 8.33vw;
         }
     }
 
@@ -1647,6 +1645,7 @@ span {
     .call {
         span {
             font-size: 16px;
+
             i {
                 font-size: 19px !important;
             }
@@ -1670,9 +1669,9 @@ span {
                 }
             }
 
-                        figcaption {
-                            font-size: 12px;
-                        }
+            figcaption {
+                font-size: 12px;
+            }
         }
     }
 
@@ -1686,8 +1685,13 @@ span {
     }
 
     .gallery-title {
+        h3 {
+            font-size: 24px;
+        }
+
         i {
-            bottom: 30px;
+            font-size: 20px;
+            bottom: 20px;
         }
     }
 
@@ -1700,6 +1704,20 @@ span {
         .swiper-txt {
             p {
                 font-size: 12px;
+            }
+        }
+
+        .swiper-button-right,
+        .swiper-button-left {
+            width: 40px;
+            height: 40px;
+        }
+
+        .swiper-button-right,
+        .swiper-button-left {
+            img {
+                width: 19px;
+                height: 19px;
             }
         }
     }

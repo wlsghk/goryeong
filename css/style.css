@@ -1108,16 +1108,16 @@ span {
     width: 7.5vw;
     height: 7.5vw;
   }
-  .gallery-title i {
-    font-size: 26px;
+  .gallery-title h3 {
+    font-size: 5vw;
   }
   .gallery-cnt .swiper-txt p {
     font-size: 2.5vw;
   }
-  .gallery-cnt .swiper-button-right img,
-  .gallery-cnt .swiper-button-left img {
-    width: 23.5px;
-    height: 23.5px;
+  .gallery-cnt .swiper-button-right,
+  .gallery-cnt .swiper-button-left {
+    width: 8.33vw;
+    height: 8.33vw;
   }
   .top {
     width: 39px;
@@ -1172,8 +1172,12 @@ span {
   .gallery .swiper {
     height: 93.75vw;
   }
+  .gallery-title h3 {
+    font-size: 24px;
+  }
   .gallery-title i {
-    bottom: 30px;
+    font-size: 20px;
+    bottom: 20px;
   }
   .gallery-cnt .swiper-slide {
     width: 93.75vw !important;
@@ -1181,5 +1185,15 @@ span {
   }
   .gallery-cnt .swiper-txt p {
     font-size: 12px;
+  }
+  .gallery-cnt .swiper-button-right,
+  .gallery-cnt .swiper-button-left {
+    width: 40px;
+    height: 40px;
+  }
+  .gallery-cnt .swiper-button-right img,
+  .gallery-cnt .swiper-button-left img {
+    width: 19px;
+    height: 19px;
   }
 }/*# sourceMappingURL=style.css.map */
