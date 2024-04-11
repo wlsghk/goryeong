@@ -1498,6 +1498,26 @@ span {
 
     // 입주업체 끝
 
+    // 공지사항/자료실
+    .notice {
+        margin-right: 16.67vw;
+    }
+
+    .board-title {
+        li {
+            font-size: 3.33vw;
+        }
+    }
+
+    .notice-cnt_title,
+    .data-cnt_title {
+        h4 {
+            font-size: 3.33vw;
+        }
+    }
+
+    // 공지사항/자료실 끝
+
     // 바로가기
     .quick {
         height: 58.33vw;
@@ -1573,6 +1593,26 @@ span {
     }
 
     // 입주업체 끝
+
+    // 공지사항/자료실
+    .notice {
+        margin-right: 80px;
+    }
+
+    .board-title {
+        li {
+            font-size: 16px;
+        }
+    }
+
+    .notice-cnt_title,
+    .data-cnt_title {
+        h4 {
+            font-size: 16px;
+        }
+    }
+
+    // 공지사항/자료실 끝
 
     // 바로가기
     .quick {
