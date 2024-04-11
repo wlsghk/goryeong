@@ -45,6 +45,7 @@ $mf: 'Pretendard-R';
 
 body {
     -ms-overflow-style: none;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -93,11 +94,12 @@ span {
 
     span {
         font-size: ($ms + 6px);
+        z-index: 999;
     }
 
     .nav {
         flex: 1;
-        z-index: 99;
+        z-index: 999;
 
         >ul {
             @extend %align-center;
@@ -440,7 +442,7 @@ span {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 9;
+        z-index: 1;
         @include font-weight('Pretendard-SB');
         text-align: center;
         line-height: 40px;
