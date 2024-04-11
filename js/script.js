@@ -18,7 +18,7 @@ window.onload = function () {
             swiper.params.slidesPerView = 2;
             swiper.params.spaceBetween = 48;
         } else if (window.innerWidth <= 480) {
-            swiper.params.slidesPerView = 2;
+            swiper.params.slidesPerView = 1;
         } else {
             swiper.params.slidesPerView = 4;
             swiper.params.spaceBetween = 30;
