@@ -23,7 +23,7 @@ window.onload = function () {
             swiper.params.slidesPerView = 4;
             swiper.params.spaceBetween = 30;
         }
-        swiper.update();
+        swiper.update(); // 스와이퍼 옵션을 업데이트한 후에 스와이퍼를 다시 초기화
     }
 
     // 함수 실행

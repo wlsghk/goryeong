@@ -46,10 +46,10 @@ $mf: 'Pretendard-R';
 body {
     max-width: 100%;
     -ms-overflow-style: none;
-    overflow-x: hidden;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    // overflow-x: hidden;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -70,6 +70,13 @@ span {
 
 .hidden {
     display: none;
+}
+
+.scroll-none {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden !important;
+    touch-action: none;
 }
 
 // 공통 끝
@@ -1685,6 +1692,7 @@ span {
     // 갤러리
     .gallery {
         .swiper {
+            width: 93.75vw;
             height: 93.75vw;
         }
     }
@@ -1702,7 +1710,7 @@ span {
 
     .gallery-cnt {
         .swiper-slide {
-            width: 93.75vw !important;
+            width: 100% !important;
             height: 66.67vw;
         }
 

@@ -54,16 +54,12 @@ $(function () {
     // 햄버거 메뉴 클릭하면 모바일 네비게이션 오픈
     $('.hamburger').click(function () {
         $('.mob-wrapper').slideDown(500);
-        $(this).on('scroll touchmove mousewheel', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
-        })
+        $('html, body').addClass('scroll-none');
     });
     // 닫기 버튼 누르면 네비게이션 slideUp
     $('.close-btn').click(function () {
         $('.mob-wrapper').slideUp(700);
         $('.mob-sub').css({ 'display': 'none' });
-        $(this).off('scroll touchmove mousewheel');
+        $('html, body').removeClass('scroll-none');
     });
 });
