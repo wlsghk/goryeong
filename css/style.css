@@ -759,7 +759,7 @@ span {
     gap: 80px;
   }
   .footer {
-    padding: 20px 40px;
+    padding: 20px 30px;
   }
   .footer-left {
     width: 60%;
@@ -1012,10 +1012,10 @@ span {
     justify-content: center;
   }
   .footer-logo img {
-    width: 40px;
+    width: 38px;
   }
   .footer-logo span {
-    font-size: 18px;
+    font-size: 17px;
   }
   .footer-info {
     text-align: center;
@@ -1024,14 +1024,14 @@ span {
     justify-content: center;
   }
   .footer-info ul a {
-    font-size: 13px;
+    font-size: 12.5px;
   }
   .footer-info address {
     line-height: 25px;
-    font-size: 13px;
+    font-size: 12.5px;
   }
   .footer-info .copyright {
-    font-size: 13px;
+    font-size: 12.5px;
   }
   .footer-go {
     width: 100%;
@@ -1040,7 +1040,7 @@ span {
   .footer-go .official,
   .footer-go .normal {
     width: 50%;
-    font-size: 14px;
+    font-size: 13px;
   }
   .top {
     width: 6.51vw;

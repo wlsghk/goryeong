@@ -969,7 +969,7 @@ span {
 
     // 푸터
     .footer {
-        padding: 20px 40px;
+        padding: 20px 30px;
     }
 
     .footer-left {
@@ -1390,11 +1390,11 @@ span {
         justify-content: center;
 
         img {
-            width: 40px;
+            width: 38px;
         }
 
         span {
-            font-size: 18px;
+            font-size: ($ms + 3px);
         }
     }
 
@@ -1405,17 +1405,17 @@ span {
             justify-content: center;
 
             a {
-                font-size: ($ms - 1px);
+                font-size: ($ms - 1.5px);
             }
         }
 
         address {
             line-height: 25px;
-            font-size: ($ms - 1px);
+            font-size: ($ms - 1.5px);
         }
 
         .copyright {
-            font-size: ($ms - 1px);
+            font-size: ($ms - 1.5px);
         }
     }
 
@@ -1426,7 +1426,7 @@ span {
         .official,
         .normal {
             width: 50%;
-            font-size: $ms;
+            font-size: ($ms - 1px);
         }
     }
 
