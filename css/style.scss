@@ -43,10 +43,14 @@ $mf: 'Pretendard-R';
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     max-width: 100%;
     -ms-overflow-style: none;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     // -webkit-box-sizing: border-box;
     // -moz-box-sizing: border-box;
     // box-sizing: border-box;

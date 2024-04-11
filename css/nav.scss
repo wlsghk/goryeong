@@ -144,12 +144,14 @@ span {
     .mob-wrapper {
         padding: 25px 35px 0;
     }
+
     .mob-main {
         ul {
             li {
                 line-height: 30px;
             }
         }
+
         >a {
             font-size: $ms;
             line-height: 40px;
@@ -167,7 +169,8 @@ span {
     }
 
     .close-btn {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+
         img {
             width: 20px;
         }
