@@ -1530,6 +1530,10 @@ span {
     .call {
         span {
             font-size: 3.33vw;
+
+            i {
+                font-size: 4.00vw !important;
+            }
         }
     }
 
@@ -1550,9 +1554,9 @@ span {
                 }
             }
 
-            figcaption {
-                font-size: 15px;
-            }
+            // figcaption {
+            //     font-size: 15px;
+            // }
         }
     }
 
@@ -1643,6 +1647,9 @@ span {
     .call {
         span {
             font-size: 16px;
+            i {
+                font-size: 19px !important;
+            }
         }
     }
 
@@ -1662,6 +1669,10 @@ span {
                     height: 36px;
                 }
             }
+
+                        figcaption {
+                            font-size: 12px;
+                        }
         }
     }
 

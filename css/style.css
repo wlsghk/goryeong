@@ -1093,6 +1093,10 @@ span {
   .call span {
     font-size: 3.33vw;
   }
+  .introduce span i,
+  .call span i {
+    font-size: 4vw !important;
+  }
   .quick {
     height: 58.33vw;
   }
@@ -1103,9 +1107,6 @@ span {
   .quick ul figure img {
     width: 7.5vw;
     height: 7.5vw;
-  }
-  .quick ul figcaption {
-    font-size: 15px;
   }
   .gallery-title i {
     font-size: 26px;
@@ -1150,6 +1151,10 @@ span {
   .call span {
     font-size: 16px;
   }
+  .introduce span i,
+  .call span i {
+    font-size: 19px !important;
+  }
   .quick {
     height: 280px;
   }
@@ -1160,6 +1165,9 @@ span {
   .quick ul figure img {
     width: 36px;
     height: 36px;
+  }
+  .quick ul figcaption {
+    font-size: 12px;
   }
   .gallery .swiper {
     height: 93.75vw;
