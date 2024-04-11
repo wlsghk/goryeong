@@ -96,8 +96,12 @@ span {
   .mob-wrapper {
     padding: 25px 35px 0;
   }
+  .mob-main ul li {
+    line-height: 30px;
+  }
   .mob-main > a {
     font-size: 14px;
+    line-height: 40px;
   }
   .mob-main > a img {
     width: 16px;
