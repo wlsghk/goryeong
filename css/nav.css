@@ -1,0 +1,114 @@
+@import './fonts/font.css';
+.mob-main > a span:last-child {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  font-family: "Pretendard-R";
+  font-size: 14px;
+  letter-spacing: -2px;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  -ms-overflow-style: none;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+}
+
+span {
+  font-size: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.mob-wrapper {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 60px 80px 0;
+  z-index: 9999;
+  display: none;
+}
+
+.close-btn {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  margin-bottom: 90px;
+}
+.close-btn img {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mob-main > a {
+  font-size: 16px;
+  border-top: 1px solid #eee;
+  padding-left: 20px;
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.mob-main > a img {
+  width: 20px;
+}
+.mob-main > a span {
+  font-family: "Pretendard-SB";
+}
+.mob-main ul {
+  display: none;
+}
+.mob-main ul li {
+  line-height: 35px;
+  padding-left: 25px;
+}
+.mob-main ul li:last-child {
+  padding-bottom: 15px;
+}
+
+.mob-main:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+@media screen and (max-width: 600px) {
+  .mob-wrapper {
+    padding: 40px 50px 0;
+  }
+  .mob-main > a {
+    font-size: 14px;
+  }
+  .mob-main > a img {
+    width: 16px;
+  }
+  .mob-sub a {
+    font-size: 12px;
+  }
+  .close-btn {
+    margin-bottom: 50px;
+  }
+  .close-btn img {
+    width: 25px;
+  }
+}/*# sourceMappingURL=nav.css.map */

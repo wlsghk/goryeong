@@ -1,0 +1,1625 @@
+// 파일 연결
+@import './fonts/font.css';
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// 공통
+* {
+    font-family: $mf;
+    font-size: $ms;
+    letter-spacing: -2px;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+a {
+    color: inherit;
+}
+
+span {
+    font-size: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+// 공통 끝
+
+// 헤더
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: none;
+    @extend %align-center;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    .logo {
+        @extend %align-center;
+        justify-content: flex-start;
+        @include font-weight('Pretendard-M');
+        width: 350px;
+
+        img {
+            margin-left: 40px;
+        }
+    }
+
+    span {
+        font-size: ($ms + 6px);
+    }
+
+    .nav {
+        flex: 1;
+        z-index: 99;
+
+        >ul {
+            @extend %align-center;
+            justify-content: space-evenly;
+
+            li {
+                position: relative;
+            }
+
+            .mainmenu {
+                font-size: ($ms + 6px);
+                @include font-weight('Pretendard-M');
+            }
+
+            .submenu {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                position: absolute;
+                top: 35px;
+                left: -47px;
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+                line-height: 40px;
+                width: 200px;
+                padding: 10px 0 10px 20px;
+                display: none;
+                background: #fff;
+
+                li {
+                    border-bottom: 1px solid #eee;
+                    width: 90%;
+                }
+
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+}
+
+// 헤더 끝
+
+// 메인 동영상
+.video {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    div {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+
+    .video-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: ($ms + 26px);
+        @include font-weight('Pretendard-M');
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7);
+
+        span {
+            font-size: ($ms + 36px);
+            color: #fff;
+            @include font-weight('Pretendard-SB');
+        }
+    }
+}
+
+// 메인 동영상 끝
+
+// 메인
+.main {
+    width: 100%;
+    margin-top: 60px;
+}
+
+// 인포
+.info {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+// 입주업체
+.company {
+    @extend %flex-center;
+
+    h3 {
+        color: #fff;
+        @include font-weight('Pretendard-SB');
+        font-size: ($ms + 6px);
+    }
+}
+
+.info-top {
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 630px;
+    height: 220px;
+    background: #3376D2;
+    padding: 27px;
+    margin-right: 20px;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    form {
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 40px;
+            font-size: ($ms + 4px);
+            background: none;
+            border: 1px solid #fff;
+            outline: none;
+            padding: 10px;
+            color: #fff;
+        }
+
+        input::placeholder {
+            color: #fff;
+        }
+    }
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    i {
+        font-size: ($ms + 3px);
+        color: #fff;
+    }
+}
+
+.line {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
+    width: 575px;
+}
+
+.info-middle {
+    display: flex;
+}
+
+.location,
+.status {
+    width: 300px;
+    height: 220px;
+
+    color: #fff;
+    @extend %flex-center;
+    flex-direction: column;
+
+    a {
+        @extend %align-center;
+        flex-direction: column;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.location {
+    background: #1E7DFF;
+    margin-right: 20px;
+}
+
+.status {
+    background: #1F8950;
+}
+
+// 입주업체 끝
+
+// 공지사항/자료실
+.info-bottom {
+    @extend %justify-center;
+}
+
+.board {
+    width: 630px;
+    height: 450px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.board-title {
+    display: flex;
+    padding-left: 20px;
+    position: relative;
+
+    li {
+        @include font-weight('Pretendard-M');
+        font-size: ($ms + 9px);
+        cursor: pointer;
+
+        i {
+            position: absolute;
+            font-size: ($ms + 20px);
+            @include font-weight('Pretendard-EB');
+            top: 0;
+            right: 20px;
+        }
+    }
+
+    li.active {
+        border-bottom: 2px solid #0066FF;
+        padding-bottom: 5px;
+    }
+}
+
+.notice {
+    margin-right: 100px;
+}
+
+.notice-cnt_title,
+.data-cnt_title {
+    @extend %align-center;
+
+    h4 {
+        font-size: ($ms + 11px);
+        @include font-weight('Pretendard-R');
+    }
+}
+
+.notice-cnt_date,
+.data-cnt_date {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #0066FF;
+    @extend %flex-center;
+    flex-direction: column;
+    margin: 0 20px;
+
+    span {
+        color: #0066FF;
+        font-size: ($ms - 2px);
+        @include font-weight('Pretendard-M');
+    }
+
+    span:last-child {
+        font-size: ($ms + 11px);
+    }
+}
+
+.title-line {
+    border-bottom: 1px solid #ddd;
+    width: 94%;
+    margin: 15px auto;
+}
+
+.notice-cnt_list,
+.data-cnt_list {
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        position: relative;
+    }
+
+    a {
+        font-size: ($ms + 3px);
+        line-height: 55px;
+
+        span {
+            position: absolute;
+            right: 20px;
+        }
+    }
+}
+
+.data-cnt {
+    display: none;
+}
+
+// 공지사항/자료실 끝
+
+// 공단소개/상담센터
+.introduce,
+.call {
+    width: 620px;
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .black {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+        top: 0;
+        left: 0;
+    }
+
+    span {
+        color: #fff;
+        font-size: ($ms + 12px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        @include font-weight('Pretendard-SB');
+        text-align: center;
+        line-height: 40px;
+
+        i {
+            color: #fff;
+            font-size: ($ms + 20px);
+        }
+    }
+}
+
+.introduce {
+    margin-bottom: 20px;
+}
+
+// 공단소개/상담센터 끝
+// 인포 끝
+
+// 바로가기
+.quick {
+    width: 100%;
+    height: 350px;
+    background: #fafafa;
+    @extend %flex-center;
+
+    ul {
+        width: 1270px;
+        @extend %justify-center;
+        gap: 8.75vw;
+        padding-left: 0px;
+        text-align: center;
+
+        figure {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            position: relative;
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        figcaption {
+            margin-top: 30px;
+            font-size: ($ms + 5px);
+        }
+
+        a:hover {
+            figure {
+                border: 1px solid #1E7DFF;
+                background: #F0F5FD;
+            }
+
+            figcaption {
+                color: #1E7DFF;
+                @include font-weight('Pretendard-M');
+            }
+        }
+    }
+}
+
+// 바로가기 끝
+
+// 갤러리
+.gallery {
+    width: 1270px;
+    margin: 60px auto 0;
+}
+
+.gallery-title {
+    @extend %align-center;
+    position: relative;
+
+    h3 {
+        font-size: ($ms + 26px);
+    }
+
+    i {
+        border: 1px solid #333;
+        padding: 7.8px;
+        font-size: ($ms + 20px);
+        position: absolute;
+        right: 0;
+        bottom: 35px;
+    }
+}
+
+.gallery-cnt {
+
+    // 스와이퍼
+    .swiper {
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        width: 295px !important;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+
+    .black {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+        top: 0;
+        left: 0;
+    }
+
+    .swiper-txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+
+        p {
+            color: #fff;
+            font-size: ($ms + 4px);
+            position: absolute;
+        }
+    }
+
+    .swiper-date {
+        top: 0;
+        right: 20px;
+    }
+
+    .swiper-title {
+        @include font-weight('Pretendard-M');
+        bottom: 0;
+        left: 20px;
+    }
+
+    .swiper-button-left,
+    .swiper-button-right {
+        top: initial;
+        bottom: 1rem;
+        color: #000000;
+        opacity: 1;
+        margin: 0 auto;
+        border: 1px solid #333;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 0px;
+    }
+
+    .swiper-button-left {
+        right: 100px;
+    }
+
+    .swiper-button-right {
+        left: 100px;
+    }
+
+    // 스와이퍼 끝
+}
+
+// 갤러리 끝
+
+.logo-line {
+    margin-top: 60px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+// 로고 시작
+.institution-logo {
+    width: 1270px;
+    margin: 60px auto;
+
+    ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            width: 190px;
+            height: 70px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            @extend %flex-center;
+            padding: 10px;
+
+            img {
+                height: 60px;
+            }
+        }
+    }
+}
+
+// 로고 끝
+// 메인 끝
+
+// 푸터
+.footer {
+    width: 100%;
+    height: 300px;
+    background: #333;
+    @extend %align-center;
+}
+
+.footer-logo {
+    @extend %flex-center;
+    width: 30%;
+    height: 100%;
+
+    span {
+        color: #fff;
+    }
+}
+
+.footer-info {
+    width: 40%;
+
+    ul {
+        @extend %align-center;
+        margin-bottom: 40px;
+
+        a,
+        span {
+            color: #fff;
+            font-size: ($ms + 1px);
+        }
+    }
+
+    address {
+        color: #fff;
+        font-style: normal;
+        line-height: 30px;
+    }
+
+    .copyright {
+        margin-top: 40px;
+        color: #fff;
+    }
+}
+
+.footer-go {
+    width: 30%;
+    display: flex;
+    gap: 10px;
+
+    .official,
+    .normal {
+        border: 1px solid #fff;
+        width: 190px;
+        height: 40px;
+        @extend %flex-center;
+        font-size: ($ms + 1px);
+        color: #fff;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
+    }
+
+    option {
+        padding: 10px;
+    }
+}
+
+// 푸터 끝
+
+// 탑버튼
+.top {
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    background: #fff;
+    @extend %flex-center;
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    z-index: 1;
+    cursor: pointer;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+// 탑버튼 끝
+
+// 미디어쿼리
+@media screen and (max-width: 1360px) {
+
+    // 헤더
+    .header {
+        height: 7.35vw;
+    }
+
+    .nav {
+        display: flex;
+        position: relative;
+
+        .nav-max {
+            display: none;
+
+            li {
+                display: none;
+            }
+        }
+
+        .hamburger {
+            display: block !important;
+            height: 100%;
+            margin: 0;
+            position: absolute;
+            right: 40px;
+
+            li {
+                cursor: pointer;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                i {
+                    font-size: ($ms + 16px);
+                }
+            }
+        }
+    }
+
+    // 헤더 끝
+
+    // 메인 동영상
+    .video-title {
+        font-size: 2.94vw !important;
+
+        span {
+            font-size: 3.68vw !important;
+        }
+    }
+
+    // 메인 동영상 끝
+
+    // 입주업체
+    .search {
+        width: 46.32vw;
+        height: 16.18vw;
+
+        h3 {
+            margin-bottom: 1.47vw;
+        }
+
+        .line {
+            width: 100%;
+            margin-bottom: 1.84vw;
+        }
+
+        form {
+
+            input {
+                height: 2.94vw;
+            }
+        }
+    }
+
+    .location,
+    .status {
+        width: 22.06vw;
+        height: 16.18vw;
+
+        a {
+            img {
+                width: 7.35vw;
+            }
+        }
+
+        h3 {
+            font-size: 1.47vw;
+        }
+    }
+
+    // 입주업체 끝
+
+    // 공지사항/자료실
+    .board {
+        width: 46.32vw;
+        height: 33.09vw;
+        padding: 1.47vw;
+    }
+
+    .introduce,
+    .call {
+        width: 45.59vw;
+    }
+
+    .introduce {
+        margin-bottom: 1.47vw;
+    }
+
+    .board-title {
+        li {
+            font-size: 1.84vw;
+
+            // i {
+            //     font-size: 3.32vw;
+            // }
+        }
+    }
+
+    .notice-cnt_title,
+    .data-cnt_title {
+        h4 {
+            font-size: 1.84vw;
+        }
+    }
+
+    .notice-cnt_date,
+    .data-cnt_date {
+        width: 5.15vw;
+        height: 5.15vw;
+    }
+
+    .title-line {
+        margin: 1.10vw auto;
+    }
+
+    .notice-cnt_list,
+    .data-cnt_list {
+        ul {
+            margin-top: 0;
+            margin-bottom: 1.03vw;
+        }
+
+        a {
+            font-size: 1.25vw;
+            line-height: 4.04vw;
+        }
+    }
+
+    // 공지사항/자료실 끝
+
+    // 공단소개/상담센터
+    .introduce,
+    .call {
+        width: 45.59vw;
+        height: 15.81vw;
+
+        span {
+            font-size: 1.91vw;
+
+            i {
+                font-size: 2.50vw;
+            }
+        }
+
+    }
+
+    // 공단소개/상담센터 끝
+
+    // 갤러리
+    .gallery {
+        width: 93.38vw;
+    }
+
+    .gallery-cnt {
+        .swiper {
+            height: 36.76vw;
+        }
+
+        .swiper-slide {
+            width: 21.69vw !important;
+            height: 25.74vw;
+        }
+
+        .swiper-txt {
+            p {
+                font-size: 1.32vw;
+            }
+        }
+    }
+
+    // 갤러리 끝
+
+    // 로고 시작
+    .institution-logo {
+        width: 93.38vw;
+
+        ul {
+            justify-content: center;
+            gap: 80px;
+        }
+    }
+
+    // 로고 끝
+
+    // 푸터
+    .footer {
+        padding: 20px 40px;
+    }
+
+    .footer-left {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0;
+        height: 30%;
+    }
+
+    .footer-info {
+        width: 100%;
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            margin-top: 20px;
+        }
+    }
+
+    .footer-go {
+        width: 40%;
+        justify-content: flex-end;
+    }
+
+    // 푸터 끝
+}
+
+@media screen and (max-width: 1280px) {
+
+    // 갤러리
+    .gallery-cnt {
+        .swiper-slide {
+            // width: 27.34vw !important;
+            // height: 31.64;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    // 메인 동영상
+    .video-title {
+        width: 100%;
+        font-size: 30px !important;
+
+        span {
+            font-size: 38px !important;
+        }
+    }
+
+    // 메인 동영상 끝
+
+    // 입주업체
+    .search {
+        margin-right: 1.95vw;
+
+        h3 {
+            font-size: 1.95vw;
+        }
+
+        form {
+            input {
+                font-size: 1.76vw;
+            }
+        }
+    }
+
+    .location,
+    .status {
+        h3 {
+            font-size: 15.1px;
+        }
+    }
+
+    .location {
+        margin-right: 1.95vw;
+    }
+
+    // 입주업체 끝
+
+    // 공지사항/자료실
+    .info-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .board {
+        width: 94.43vw;
+        height: 340px;
+        margin-right: 0;
+    }
+
+    .board-title {
+        li {
+            font-size: ($ms + 6px);
+
+            i {
+                top: -5px;
+                font-size: ($ms + 15px);
+            }
+        }
+    }
+
+    .notice-cnt_title,
+    .data-cnt_title {
+        h4 {
+            font-size: ($ms + 6px);
+            margin: 0;
+        }
+    }
+
+    .notice-cnt_date,
+    .data-cnt_date {
+        width: 55px;
+        height: 55px;
+    }
+
+    .title-line {
+        width: 96%;
+        margin: 20px auto 5px;
+    }
+
+    .notice-cnt_list,
+    .data-cnt_list {
+        a {
+            font-size: ($ms + 1px);
+            line-height: 45px;
+        }
+    }
+
+    // 공지사항/자료실 끝
+
+    // 공단소개/상담센터
+    .introduce,
+    .call {
+        width: 94.43vw;
+        height: 22.46vw;
+
+        span {
+            font-size: ($ms + 6px);
+        }
+
+        i {
+            font-size: ($ms + 10px) !important;
+        }
+    }
+
+    .introduce {
+        margin: 20px 0;
+    }
+
+    // 공단소개/상담센터 끝
+
+    // 바로가기
+    .quick {
+        ul {
+            figure {
+                width: 11.72vw;
+                height: 11.72vw;
+
+                img {
+                    width: 5.86vw;
+                    height: 5.86vw;
+                }
+            }
+        }
+    }
+
+    // 바로가기 끝
+
+    // 갤러리
+    .gallery-title {
+        h3 {
+            font-size: 3.91vw;
+        }
+    }
+
+    .gallery-cnt {
+        .swiper {
+            height: 48.83vw;
+        }
+
+        .swiper-slide {
+            width: 29.30vw !important;
+            height: 35.43vw;
+
+            a {
+                height: inherit;
+            }
+        }
+
+        .swiper-txt {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    // 로고
+    .institution-logo {
+        ul {
+            gap: 7.81vw;
+
+        }
+    }
+
+    // 로고 끝
+
+    // 푸터
+    .footer-logo {
+        img {
+            width: 6.25vw;
+        }
+
+        span {
+            font-size: 2.73vw;
+        }
+    }
+
+    // 푸터 끝
+
+}
+
+@media screen and (max-width: 768px) {
+
+    // 헤더
+    .header {
+        height: 56.5px;
+
+        .logo {
+            span {
+                font-size: 2.60vw;
+            }
+
+            img {
+                width: 8.33vw;
+                margin-left: 5.21vw;
+            }
+        }
+
+        .nav {
+            .hamburger {
+                right: 5.21vw;
+
+                i {
+                    font-size: 3.91vw;
+                }
+            }
+        }
+    }
+
+    // 헤더 끝
+
+    // 메인
+    .main {
+        margin-top: 0px;
+    }
+
+    // 입주업체
+    .info-top {
+        flex-direction: column;
+    }
+
+    .search {
+        width: 100%;
+        height: 150px;
+        margin: 0;
+
+        h3 {
+            font-size: ($ms + 2px);
+        }
+
+        form {
+            input {
+                height: 30px;
+                font-size: $ms;
+            }
+        }
+    }
+
+    .info-middle {
+        display: flex;
+        width: 100%;
+        height: 150px;
+    }
+
+    .location,
+    .status {
+        width: 50%;
+        height: 100%;
+
+        a {
+            img {
+                width: 80px;
+            }
+        }
+
+        h3 {
+            font-size: ($ms + 2px) !important;
+        }
+    }
+
+    .location {
+        margin: 0;
+    }
+
+    // 입주업체 끝
+
+    // 공단소개/상담센터
+    .introduce,
+    .call {
+        height: 172.5px;
+    }
+
+    // 공단소개/상담센터 끝
+
+    // 바로가기
+    .quick {
+        ul {
+            gap: 13.02vw;
+            margin: 0;
+
+            figure {
+                width: 90px;
+                height: 90px;
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            figcaption {
+                margin-top: 20px;
+                font-size: 2.47vw;
+            }
+        }
+
+        ul:last-child {
+            margin: 14px 0;
+        }
+    }
+
+    // 바로가기 끝
+
+    // 갤러리
+    .gallery-title {
+        h3 {
+            font-size: 30px;
+        }
+
+        i {
+            font-size: 4.43vw;
+            bottom: 4.56vw;
+        }
+    }
+
+    .gallery-cnt {
+        .swiper {
+            height: 71.61vw;
+        }
+
+        .swiper-slide {
+            width: 42.97vw !important;
+            height: 52.08vw;
+        }
+
+        .swiper-button-right,
+        .swiper-button-left {
+            img {
+                width: 3.91vw;
+                height: 3.91vw;
+            }
+        }
+    }
+
+    // 갤러리 끝
+
+    // 로고 시작
+    .institution-logo {
+        ul {
+
+            li {
+                width: 24.74vw;
+                height: 9.11vw;
+
+                img {
+                    height: 7.81vw;
+                }
+            }
+        }
+    }
+
+    // 로고 끝
+
+    // 메인 끝
+
+    // 푸터
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-left {
+        width: 100%;
+    }
+
+    .footer-logo {
+        justify-content: center;
+
+        img {
+            width: 40px;
+        }
+
+        span {
+            font-size: 18px;
+        }
+    }
+
+    .footer-info {
+        text-align: center;
+
+        ul {
+            justify-content: center;
+
+            a {
+                font-size: ($ms - 1px);
+            }
+        }
+
+        address {
+            line-height: 25px;
+            font-size: ($ms - 1px);
+        }
+
+        .copyright {
+            font-size: ($ms - 1px);
+        }
+    }
+
+    .footer-go {
+        width: 100%;
+        justify-content: center;
+
+        .official,
+        .normal {
+            width: 50%;
+            font-size: $ms;
+        }
+    }
+
+    // 푸터 끝
+
+    // 탑버튼
+    .top {
+        width: 6.51vw;
+        height: 6.51vw;
+
+        img {
+            width: 3.26vw;
+            height: 3.26vw;
+        }
+    }
+
+    // 탑버튼 끝
+
+}
+
+@media screen and (max-width: 600px) {
+
+    // 헤더
+    .header {
+        .logo {
+            span {
+                font-size: 15.6px;
+            }
+
+            img {
+                width: 50px;
+                margin-left: 31.3px;
+            }
+        }
+    }
+
+    .nav {
+        .hamburger {
+            right: 31.3px !important;
+
+            i {
+                font-size: 21.5px !important;
+            }
+        }
+    }
+
+    // 헤더 끝
+
+    // 메인 동영상
+    .video-title {
+        font-size: 5vw !important;
+
+        span {
+            font-size: 6.33vw !important;
+        }
+    }
+
+    // 메인 동영상 끝
+
+    // 입주업체
+    .location,
+    .status {
+        a {
+            img {
+                width: 13.33vw;
+            }
+        }
+    }
+
+    // 입주업체 끝
+
+    // 바로가기
+    .quick {
+        height: 58.33vw;
+
+        ul {
+            figure {
+                width: 15vw;
+                height: 15vw;
+
+                img {
+                    width: 7.50vw;
+                    height: 7.50vw;
+                }
+            }
+
+            figcaption {
+                font-size: 15px;
+            }
+        }
+    }
+
+    // 바로가기 끝
+
+    // 갤러리
+    .gallery-title {
+        i {
+            font-size: 26px;
+        }
+    }
+
+    .gallery-cnt {
+        .swiper-txt {
+            p {
+                font-size: 2.50vw;
+            }
+        }
+
+        .swiper-button-right,
+        .swiper-button-left {
+            img {
+                width: 23.5px;
+                height: 23.5px;
+            }
+        }
+    }
+
+    // 갤러리 끝
+
+    // 탑버튼
+    .top {
+        width: 39px;
+        height: 39px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    // 탑버튼 끝
+}
+
+@media screen and (max-width: 480px) {
+
+    // 입주업체
+    .location,
+    .status {
+        a {
+            img {
+                width: 64px;
+            }
+        }
+    }
+
+    // 입주업체 끝
+
+    // 바로가기
+    .quick {
+        height: 280px;
+
+        ul {
+            figure {
+                width: 72px;
+                height: 72px;
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+
+    // 바로가기 끝
+
+    // 갤러리
+    .gallery {
+        .swiper {
+            height: 93.75vw;
+        }
+    }
+
+    .gallery-title {
+        i {
+            bottom: 30px;
+        }
+    }
+
+    .gallery-cnt {
+        .swiper-slide {
+            width: 93.75vw !important;
+            height: 66.67vw;
+        }
+
+        .swiper-txt {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // 갤러리 끝
+}
+
+
+// 미디어쿼리 끝
