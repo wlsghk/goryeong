@@ -1516,13 +1516,24 @@ span {
         }
     }
 
-    .notice-cnt_list, .data-cnt_list {
+    .notice-cnt_list,
+    .data-cnt_list {
         a {
             font-size: 2.50vw;
         }
     }
 
     // 공지사항/자료실 끝
+
+    // 공단소개
+    .introduce,
+    .call {
+        span {
+            font-size: 3.33vw;
+        }
+    }
+
+    // 공단소개 끝
 
     // 바로가기
     .quick {
@@ -1618,14 +1629,24 @@ span {
         }
     }
 
-        .notice-cnt_list,
-        .data-cnt_list {
-            a {
-                font-size: 12px;
-            }
+    .notice-cnt_list,
+    .data-cnt_list {
+        a {
+            font-size: 12px;
         }
+    }
 
     // 공지사항/자료실 끝
+
+    // 공단소개
+    .introduce,
+    .call {
+        span {
+            font-size: 16px;
+        }
+    }
+
+    // 공단소개 끝
 
     // 바로가기
     .quick {

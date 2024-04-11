@@ -1085,8 +1085,13 @@ span {
   .data-cnt_title h4 {
     font-size: 3.33vw;
   }
-  .notice-cnt_list a, .data-cnt_list a {
+  .notice-cnt_list a,
+  .data-cnt_list a {
     font-size: 2.5vw;
+  }
+  .introduce span,
+  .call span {
+    font-size: 3.33vw;
   }
   .quick {
     height: 58.33vw;
@@ -1140,6 +1145,10 @@ span {
   .notice-cnt_list a,
   .data-cnt_list a {
     font-size: 12px;
+  }
+  .introduce span,
+  .call span {
+    font-size: 16px;
   }
   .quick {
     height: 280px;
