@@ -1516,6 +1516,12 @@ span {
         }
     }
 
+    .notice-cnt_list, .data-cnt_list {
+        a {
+            font-size: 2.50vw;
+        }
+    }
+
     // 공지사항/자료실 끝
 
     // 바로가기
@@ -1611,6 +1617,13 @@ span {
             font-size: 16px;
         }
     }
+
+        .notice-cnt_list,
+        .data-cnt_list {
+            a {
+                font-size: 12px;
+            }
+        }
 
     // 공지사항/자료실 끝
 
