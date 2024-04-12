@@ -1,7 +1,7 @@
 @import './fonts/font.css';
-.footer-info ul, .footer, .gallery-title, .notice-cnt_title,
+.gallery-title, .notice-cnt_title,
 .data-cnt_title, .location a,
-.status a, .header .nav > ul, .header .logo, .header {
+.status a {
   display: flex;
   align-items: center;
 }
@@ -11,8 +11,7 @@
   justify-content: center;
 }
 
-.top, .footer-go .official,
-.footer-go .normal, .footer-logo, .institution-logo ul li, .quick, .notice-cnt_date,
+.top, .institution-logo ul li, .quick, .notice-cnt_date,
 .data-cnt_date, .location,
 .status, .company {
   display: flex;
@@ -65,66 +64,6 @@ span {
   min-height: 100%;
   overflow: hidden !important;
   touch-action: none;
-}
-
-.header {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  background: none;
-  z-index: 99;
-  border-bottom: 1px solid #fff;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-.header .logo {
-  justify-content: flex-start;
-  font-family: "Pretendard-M";
-  width: 350px;
-}
-.header .logo img {
-  margin-left: 40px;
-}
-.header span {
-  font-size: 20px;
-  z-index: 999;
-}
-.header .nav {
-  flex: 1;
-  z-index: 999;
-}
-.header .nav > ul {
-  justify-content: space-evenly;
-}
-.header .nav > ul li {
-  position: relative;
-}
-.header .nav > ul .mainmenu {
-  font-size: 20px;
-  font-family: "Pretendard-M";
-}
-.header .nav > ul .submenu {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  position: absolute;
-  top: 35px;
-  left: -47px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  line-height: 40px;
-  width: 200px;
-  padding: 10px 0 10px 20px;
-  display: none;
-  background: #fff;
-}
-.header .nav > ul .submenu li {
-  border-bottom: 1px solid #eee;
-  width: 90%;
-}
-.header .nav > ul .submenu li:last-child {
-  border-bottom: none;
-}
-.header .nav .hamburger {
-  display: none;
 }
 
 .video {
@@ -566,61 +505,6 @@ span {
   height: 60px;
 }
 
-.footer {
-  width: 100%;
-  height: 300px;
-  background: #333;
-}
-
-.footer-logo {
-  width: 30%;
-  height: 100%;
-}
-.footer-logo span {
-  color: #fff;
-}
-
-.footer-info {
-  width: 40%;
-}
-.footer-info ul {
-  margin-bottom: 40px;
-}
-.footer-info ul a,
-.footer-info ul span {
-  color: #fff;
-  font-size: 15px;
-}
-.footer-info address {
-  color: #fff;
-  font-style: normal;
-  line-height: 30px;
-}
-.footer-info .copyright {
-  margin-top: 40px;
-  color: #fff;
-}
-
-.footer-go {
-  width: 30%;
-  display: flex;
-  gap: 10px;
-}
-.footer-go .official,
-.footer-go .normal {
-  border: 1px solid #fff;
-  width: 190px;
-  height: 40px;
-  font-size: 15px;
-  color: #fff;
-  background: transparent;
-  outline: none;
-  cursor: pointer;
-}
-.footer-go option {
-  padding: 10px;
-}
-
 .top {
   visibility: hidden;
   width: 40px;
@@ -639,35 +523,6 @@ span {
 }
 
 @media screen and (max-width: 1360px) {
-  .header {
-    height: 7.35vw;
-  }
-  .nav {
-    display: flex;
-    position: relative;
-  }
-  .nav .nav-max {
-    display: none;
-  }
-  .nav .nav-max li {
-    display: none;
-  }
-  .nav .hamburger {
-    display: block !important;
-    height: 100%;
-    margin: 0;
-    position: absolute;
-    right: 40px;
-  }
-  .nav .hamburger li {
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .nav .hamburger li i {
-    font-size: 30px;
-  }
   .video-title {
     font-size: 2.94vw !important;
   }
@@ -770,35 +625,6 @@ span {
   .institution-logo ul {
     justify-content: center;
     gap: 80px;
-  }
-  .footer {
-    padding: 20px 30px;
-  }
-  .footer-left {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .footer-logo {
-    width: 100%;
-    justify-content: flex-start;
-    margin: 0;
-    height: 30%;
-  }
-  .footer-info {
-    width: 100%;
-  }
-  .footer-info ul {
-    margin-bottom: 20px;
-  }
-  .footer-info .copyright {
-    margin-top: 20px;
-  }
-  .footer-go {
-    width: 40%;
-    justify-content: flex-end;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -903,30 +729,8 @@ span {
   .institution-logo ul {
     gap: 7.81vw;
   }
-  .footer-logo img {
-    width: 6.25vw;
-  }
-  .footer-logo span {
-    font-size: 2.73vw;
-  }
 }
 @media screen and (max-width: 768px) {
-  .header {
-    height: 56.5px;
-  }
-  .header .logo span {
-    font-size: 2.6vw;
-  }
-  .header .logo img {
-    width: 8.33vw;
-    margin-left: 5.21vw;
-  }
-  .header .nav .hamburger {
-    right: 5.21vw;
-  }
-  .header .nav .hamburger i {
-    font-size: 3.91vw;
-  }
   .main {
     margin-top: 0px;
   }
@@ -1015,46 +819,6 @@ span {
   .institution-logo ul li img {
     height: 7.81vw;
   }
-  .footer {
-    flex-direction: column-reverse;
-  }
-  .footer-left {
-    width: 100%;
-  }
-  .footer-logo {
-    justify-content: center;
-  }
-  .footer-logo img {
-    width: 38px;
-  }
-  .footer-logo span {
-    font-size: 17px;
-  }
-  .footer-info {
-    text-align: center;
-  }
-  .footer-info ul {
-    justify-content: center;
-  }
-  .footer-info ul a {
-    font-size: 12.5px;
-  }
-  .footer-info address {
-    line-height: 25px;
-    font-size: 12.5px;
-  }
-  .footer-info .copyright {
-    font-size: 12.5px;
-  }
-  .footer-go {
-    width: 100%;
-    justify-content: center;
-  }
-  .footer-go .official,
-  .footer-go .normal {
-    width: 50%;
-    font-size: 13px;
-  }
   .top {
     width: 6.51vw;
     height: 6.51vw;
@@ -1065,19 +829,6 @@ span {
   }
 }
 @media screen and (max-width: 600px) {
-  .header .logo span {
-    font-size: 15.6px;
-  }
-  .header .logo img {
-    width: 50px;
-    margin-left: 31.3px;
-  }
-  .nav .hamburger {
-    right: 31.3px !important;
-  }
-  .nav .hamburger i {
-    font-size: 21.5px !important;
-  }
   .video-title {
     font-size: 5vw !important;
   }
@@ -1160,6 +911,10 @@ span {
   .data-cnt_list a {
     font-size: 12px;
   }
+  .introduce img,
+  .call img {
+    height: 100%;
+  }
   .introduce span,
   .call span {
     font-size: 16px;
@@ -1194,7 +949,7 @@ span {
     bottom: 20px;
   }
   .gallery-cnt .swiper-slide {
-    width: 100% !important;
+    width: 93.75vw !important;
     height: 66.67vw;
   }
   .gallery-cnt .swiper-txt p {

@@ -1,0 +1,268 @@
+@import './fonts/font.css';
+.login-input div label, .login-title {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  font-family: "Pretendard-R";
+  font-size: 14px;
+  letter-spacing: -2px;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  -ms-overflow-style: none;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+}
+
+span {
+  font-size: inherit;
+}
+
+input {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.background {
+  width: 100%;
+  height: 300px;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.background img {
+  width: inherit;
+}
+
+.login {
+  height: 600px;
+  flex-direction: column;
+}
+
+.login-title img {
+  width: 80px;
+  height: 80px;
+  margin-right: 25px;
+}
+.login-title h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.login-subtitle {
+  font-size: 20px;
+  margin: 50px 0;
+}
+
+.login-input {
+  display: flex;
+}
+.login-input div {
+  display: flex;
+  flex-direction: column;
+}
+.login-input div label {
+  font-size: 25px;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+.login-input div label:first-child {
+  margin-bottom: 20px;
+}
+
+#adId,
+#adPw {
+  margin-left: 25px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+#adId::-moz-placeholder, #adPw::-moz-placeholder {
+  font-size: 20px;
+}
+
+#adId::placeholder,
+#adPw::placeholder {
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  background: #3376D2;
+  color: #fff;
+  width: 215px;
+  height: 100%;
+  border-radius: 3px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  .background {
+    height: 29.3vw;
+  }
+  .login-title img {
+    width: 7.81vw;
+    height: 7.81vw;
+  }
+  .login-title h3 {
+    font-size: 3.91vw;
+  }
+  .login-input div label {
+    font-size: 2.44vw;
+  }
+  .login-input div label:first-child {
+    margin-bottom: 1.95vw;
+  }
+  #adId::-moz-placeholder, #adPw::-moz-placeholder {
+    font-size: 1.95vw;
+  }
+  #adId::placeholder,
+  #adPw::placeholder {
+    font-size: 1.95vw;
+  }
+  button {
+    width: 21vw;
+    font-size: 2.44vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .background {
+    height: 225px;
+  }
+  .login-title img {
+    width: 60px;
+    height: 60px;
+    margin-right: 3.26vw;
+  }
+  .login-title h3 {
+    font-size: 30px;
+  }
+  .login-subtitle {
+    font-size: 2.6vw;
+  }
+  .login-input div label {
+    font-size: 18.8px;
+  }
+  .login-input div label:first-child {
+    margin-bottom: 15px;
+  }
+  #adId::-moz-placeholder, #adPw::-moz-placeholder {
+    font-size: 15px;
+  }
+  #adId::placeholder,
+  #adPw::placeholder {
+    font-size: 15px;
+  }
+  button {
+    width: 161px;
+    font-size: 18.8px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .background {
+    height: 37.5vw;
+  }
+  .login {
+    height: 100vw;
+  }
+  .login-title img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .login-title h3 {
+    font-size: 5vw;
+  }
+  .login-subtitle {
+    font-size: 15.6px;
+    margin: 8.33vw 0;
+  }
+  .login-input div label {
+    font-size: 3.13vw;
+    margin-right: 3.33vw;
+  }
+  .login-input div label:first-child {
+    margin-bottom: 2.5vw;
+  }
+  #adId,
+  #adPw {
+    margin-left: 4.17vw;
+  }
+  #adId::-moz-placeholder, #adPw::-moz-placeholder {
+    font-size: 2.5vw;
+  }
+  #adId::placeholder,
+  #adPw::placeholder {
+    font-size: 2.5vw;
+  }
+  button {
+    width: 26.83vw;
+    font-size: 3.13vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .login {
+    height: 480px;
+  }
+  .login-title img {
+    width: 48px;
+    height: 48px;
+    margin-right: 15.7px;
+  }
+  .login-title h3 {
+    font-size: 24px;
+  }
+  .login-subtitle {
+    margin: 40px 0;
+  }
+  .login-input div label {
+    font-size: 3.13vw;
+    margin-right: 3.33vw;
+  }
+  .login-input div label:first-child {
+    margin-bottom: 2.5vw;
+  }
+  #adId,
+  #adPw {
+    margin-left: 0px;
+  }
+  #adId::-moz-placeholder, #adPw::-moz-placeholder {
+    font-size: 12px;
+  }
+  #adId::placeholder,
+  #adPw::placeholder {
+    font-size: 12px;
+  }
+  button {
+    width: 129px;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=login.css.map */

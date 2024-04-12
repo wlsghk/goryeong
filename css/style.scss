@@ -85,83 +85,6 @@ span {
 
 // 공통 끝
 
-// 헤더
-.header {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background: none;
-    @extend %align-center;
-    z-index: 99;
-    border-bottom: 1px solid #fff;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-
-    .logo {
-        @extend %align-center;
-        justify-content: flex-start;
-        @include font-weight('Pretendard-M');
-        width: 350px;
-
-        img {
-            margin-left: 40px;
-        }
-    }
-
-    span {
-        font-size: ($ms + 6px);
-        z-index: 999;
-    }
-
-    .nav {
-        flex: 1;
-        z-index: 999;
-
-        >ul {
-            @extend %align-center;
-            justify-content: space-evenly;
-
-            li {
-                position: relative;
-            }
-
-            .mainmenu {
-                font-size: ($ms + 6px);
-                @include font-weight('Pretendard-M');
-            }
-
-            .submenu {
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
-                position: absolute;
-                top: 35px;
-                left: -47px;
-                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-                line-height: 40px;
-                width: 200px;
-                padding: 10px 0 10px 20px;
-                display: none;
-                background: #fff;
-
-                li {
-                    border-bottom: 1px solid #eee;
-                    width: 90%;
-                }
-
-                li:last-child {
-                    border-bottom: none;
-                }
-            }
-        }
-
-        .hamburger {
-            display: none;
-        }
-    }
-}
-
-// 헤더 끝
-
 // 메인 동영상
 .video {
     width: 100%;
@@ -687,75 +610,6 @@ span {
 // 로고 끝
 // 메인 끝
 
-// 푸터
-.footer {
-    width: 100%;
-    height: 300px;
-    background: #333;
-    @extend %align-center;
-}
-
-.footer-logo {
-    @extend %flex-center;
-    width: 30%;
-    height: 100%;
-
-    span {
-        color: #fff;
-    }
-}
-
-.footer-info {
-    width: 40%;
-
-    ul {
-        @extend %align-center;
-        margin-bottom: 40px;
-
-        a,
-        span {
-            color: #fff;
-            font-size: ($ms + 1px);
-        }
-    }
-
-    address {
-        color: #fff;
-        font-style: normal;
-        line-height: 30px;
-    }
-
-    .copyright {
-        margin-top: 40px;
-        color: #fff;
-    }
-}
-
-.footer-go {
-    width: 30%;
-    display: flex;
-    gap: 10px;
-
-    .official,
-    .normal {
-        border: 1px solid #fff;
-        width: 190px;
-        height: 40px;
-        @extend %flex-center;
-        font-size: ($ms + 1px);
-        color: #fff;
-        background: transparent;
-        outline: none;
-        cursor: pointer;
-    }
-
-    option {
-        padding: 10px;
-    }
-}
-
-// 푸터 끝
-
 // 탑버튼
 .top {
     visibility: hidden;
@@ -781,44 +635,7 @@ span {
 // 미디어쿼리
 @media screen and (max-width: 1360px) {
 
-    // 헤더
-    .header {
-        height: 7.35vw;
-    }
-
-    .nav {
-        display: flex;
-        position: relative;
-
-        .nav-max {
-            display: none;
-
-            li {
-                display: none;
-            }
-        }
-
-        .hamburger {
-            display: block !important;
-            height: 100%;
-            margin: 0;
-            position: absolute;
-            right: 40px;
-
-            li {
-                cursor: pointer;
-                height: 100%;
-                display: flex;
-                align-items: center;
-
-                i {
-                    font-size: ($ms + 16px);
-                }
-            }
-        }
-    }
-
-    // 헤더 끝
+   
 
     // 메인 동영상
     .video-title {
@@ -982,45 +799,6 @@ span {
     }
 
     // 로고 끝
-
-    // 푸터
-    .footer {
-        padding: 20px 30px;
-    }
-
-    .footer-left {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .footer-logo {
-        width: 100%;
-        justify-content: flex-start;
-        margin: 0;
-        height: 30%;
-    }
-
-    .footer-info {
-        width: 100%;
-
-        ul {
-            margin-bottom: 20px;
-        }
-
-        .copyright {
-            margin-top: 20px;
-        }
-    }
-
-    .footer-go {
-        width: 40%;
-        justify-content: flex-end;
-    }
-
-    // 푸터 끝
 }
 
 @media screen and (max-width: 1280px) {
@@ -1204,50 +982,10 @@ span {
 
     // 로고 끝
 
-    // 푸터
-    .footer-logo {
-        img {
-            width: 6.25vw;
-        }
-
-        span {
-            font-size: 2.73vw;
-        }
-    }
-
-    // 푸터 끝
-
 }
 
 @media screen and (max-width: 768px) {
 
-    // 헤더
-    .header {
-        height: 56.5px;
-
-        .logo {
-            span {
-                font-size: 2.60vw;
-            }
-
-            img {
-                width: 8.33vw;
-                margin-left: 5.21vw;
-            }
-        }
-
-        .nav {
-            .hamburger {
-                right: 5.21vw;
-
-                i {
-                    font-size: 3.91vw;
-                }
-            }
-        }
-    }
-
-    // 헤더 끝
 
     // 메인
     .main {
@@ -1393,60 +1131,7 @@ span {
 
     // 메인 끝
 
-    // 푸터
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer-left {
-        width: 100%;
-    }
-
-    .footer-logo {
-        justify-content: center;
-
-        img {
-            width: 38px;
-        }
-
-        span {
-            font-size: ($ms + 3px);
-        }
-    }
-
-    .footer-info {
-        text-align: center;
-
-        ul {
-            justify-content: center;
-
-            a {
-                font-size: ($ms - 1.5px);
-            }
-        }
-
-        address {
-            line-height: 25px;
-            font-size: ($ms - 1.5px);
-        }
-
-        .copyright {
-            font-size: ($ms - 1.5px);
-        }
-    }
-
-    .footer-go {
-        width: 100%;
-        justify-content: center;
-
-        .official,
-        .normal {
-            width: 50%;
-            font-size: ($ms - 1px);
-        }
-    }
-
-    // 푸터 끝
+    
 
     // 탑버튼
     .top {
@@ -1465,31 +1150,6 @@ span {
 
 @media screen and (max-width: 600px) {
 
-    // 헤더
-    .header {
-        .logo {
-            span {
-                font-size: 15.6px;
-            }
-
-            img {
-                width: 50px;
-                margin-left: 31.3px;
-            }
-        }
-    }
-
-    .nav {
-        .hamburger {
-            right: 31.3px !important;
-
-            i {
-                font-size: 21.5px !important;
-            }
-        }
-    }
-
-    // 헤더 끝
 
     // 메인 동영상
     .video-title {
@@ -1659,6 +1319,10 @@ span {
     // 공단소개
     .introduce,
     .call {
+        img {
+            height: 100%;
+        }
+
         span {
             font-size: 16px;
 
@@ -1714,7 +1378,7 @@ span {
 
     .gallery-cnt {
         .swiper-slide {
-            width: 100% !important;
+            width: 93.75vw !important;
             height: 66.67vw;
         }
 

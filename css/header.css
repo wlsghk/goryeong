@@ -1,0 +1,130 @@
+@import './fonts/font.css';
+.header .nav > ul, .header .logo, .header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: none;
+  z-index: 99;
+  border-bottom: 1px solid #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  justify-content: flex-start;
+  font-family: "Pretendard-M";
+  width: 350px;
+}
+.header .logo img {
+  margin-left: 40px;
+}
+.header span {
+  font-size: 20px;
+  z-index: 999;
+}
+.header .nav {
+  flex: 1;
+  z-index: 999;
+}
+.header .nav > ul {
+  justify-content: space-evenly;
+}
+.header .nav > ul li {
+  position: relative;
+}
+.header .nav > ul .mainmenu {
+  font-size: 20px;
+  font-family: "Pretendard-M";
+}
+.header .nav > ul .submenu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  top: 35px;
+  left: -47px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  line-height: 40px;
+  width: 200px;
+  padding: 10px 0 10px 20px;
+  display: none;
+  background: #fff;
+}
+.header .nav > ul .submenu li {
+  border-bottom: 1px solid #eee;
+  width: 90%;
+}
+.header .nav > ul .submenu li:last-child {
+  border-bottom: none;
+}
+.header .nav .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1360px) {
+  .header {
+    height: 7.35vw;
+  }
+  .nav {
+    display: flex;
+    position: relative;
+  }
+  .nav .nav-max {
+    display: none;
+  }
+  .nav .nav-max li {
+    display: none;
+  }
+  .nav .hamburger {
+    display: block !important;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    right: 40px;
+  }
+  .nav .hamburger li {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .nav .hamburger li i {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 56.5px;
+  }
+  .header .logo span {
+    font-size: 2.6vw;
+  }
+  .header .logo img {
+    width: 8.33vw;
+    margin-left: 5.21vw;
+  }
+  .header .nav .hamburger {
+    right: 5.21vw;
+  }
+  .header .nav .hamburger i {
+    font-size: 3.91vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .logo span {
+    font-size: 15.6px;
+  }
+  .header .logo img {
+    width: 50px;
+    margin-left: 31.3px;
+  }
+  .nav .hamburger {
+    right: 31.3px !important;
+  }
+  .nav .hamburger i {
+    font-size: 21.5px !important;
+  }
+}/*# sourceMappingURL=header.css.map */
