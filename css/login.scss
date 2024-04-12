@@ -46,6 +46,7 @@ $mf: 'Pretendard-R';
 body {
     -ms-overflow-style: none;
     background: #fff;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -66,6 +67,7 @@ span {
 
 input {
     outline: none;
+    letter-spacing: 0;
 }
 
 .hidden {
@@ -144,6 +146,7 @@ input {
     border: 1px solid #ddd;
     border-radius: 3px;
     padding: 5px 10px;
+    letter-spacing: 0px;
 }
 
 #adId::placeholder,

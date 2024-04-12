@@ -55,6 +55,11 @@ span {
   font-size: inherit;
 }
 
+input {
+  outline: none;
+  letter-spacing: 0;
+}
+
 .hidden {
   display: none;
 }
