@@ -44,7 +44,7 @@ span {
 
 input {
   outline: none;
-  letter-spacing: 0;
+  letter-spacing: -1;
 }
 
 .hidden {
@@ -111,11 +111,13 @@ input {
 
 #adId::-moz-placeholder, #adPw::-moz-placeholder {
   font-size: 20px;
+  color: #ddd;
 }
 
 #adId::placeholder,
 #adPw::placeholder {
   font-size: 20px;
+  color: #ddd;
 }
 
 button {

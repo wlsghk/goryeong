@@ -67,7 +67,7 @@ span {
 
 input {
     outline: none;
-    letter-spacing: 0;
+    letter-spacing: -1;
 }
 
 .hidden {
@@ -152,6 +152,7 @@ input {
 #adId::placeholder,
 #adPw::placeholder {
     font-size: ($ms + 6px);
+    color: #ddd;
 }
 
 button {
