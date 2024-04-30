@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- css admin -->
+    <link rel="stylesheet" href="./css/ad_style.css">
+    <link rel="stylesheet" href="./css/ad_common.css">
+    <link rel="stylesheet" href="./css/ad_notice.css">
+    <link rel="stylesheet" href="./css/ad_header.css">
+    <!-- css normal -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <title>고령2일반산업단지관리공단_관리자</title>
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <? include "header.html"?>
+    <!-- // 헤더 -->
+
+    <!-- 전체 레이아웃 -->
+    <div class="ad-wrapper">
+
+        <div class="ad-now">
+            <ul>
+                <li>공지사항&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;공지사항</li>
+            </ul>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="ad-title">
+            <h3>공지사항</h3>
+        </div>
+        <!-- // 타이틀 -->
+
+        <!-- 공지사항 -->
+        <main class="notice">
+            <div class="inner">
+                <form action="">
+                    <div class="notice-search">
+                        <select name="" id="">
+                            <option value="1">전체</option>
+                            <option value="2">제목</option>
+                            <option value="3">작성자</option>
+                        </select>
+
+                        <div class="notice-search_bar">
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요">
+                            <div class="notice-search_btn">
+                                <span>
+                                    <a href="./notice_write.html">
+                                        <input type="submit" value="검색">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>날짜</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="check">
+                                    <input type="checkbox" id="adCheck">
+                                    <label for="adCheck" class="hidden">체크박스</label>
+                                </td>
+                                <td>
+                                    <a href="./notice_list.html">2024년 한국생산성본부 패키지 구독형 원격훈련 지원사업 안내
+                                    </a>
+                                </td>
+                                <td>관리자</td>
+                                <td>2024-04-27</td>
+                                <td class="last-td">
+                                    <a href="./notice_edit.html">수정
+                                    </a>
+                                    <a href="#">삭제
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="check">
+                                    <input type="checkbox" id="adCheck">
+                                    <label for="adCheck" class="hidden">체크박스</label>
+                                </td>
+                                <td>
+                                    <a href="./notice_list.html">고용노동부 인재채움뱅크 사업안내</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>2024-04-25</td>
+                                <td class="last-td">
+                                    <a href="./notice_edit.html">수정
+                                    </a>
+                                    <a href="#">삭제
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="check">
+                                    <input type="checkbox" id="adCheck">
+                                    <label for="adCheck" class="hidden">체크박스</label>
+                                </td>
+                                <td>
+                                    <a href="./notice_list.html">
+                                        2024년 일터혁신 컨설팅 참여기업 모집 안내
+                                    </a>
+                                </td>
+                                <td>관리자</td>
+                                <td>2024-04-20</td>
+                                <td class="last-td">
+                                    <a href="./notice_edit.html">수정
+                                    </a>
+                                    <a href="#">삭제
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="notice-write">
+                        <a href="./notice_write.html">글쓰기</a>
+                        <a href="#"> 삭제</a>
+                    </div>
+
+                    <div class="page-btn">
+                        <a href="#">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                        <strong class="clicked">
+                            <a href="#">1</a>
+                        </strong>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <!-- // 공지사항 -->
+
+        <!-- 탑 버튼 -->
+        <div class="top" onclick="window.scrollTo(0, 0);">
+            <img src="/img/icon/top.png" alt="탑 버튼 이미지">
+        </div>
+        <!-- // 탑 버튼 -->
+    </div>
+    <!-- 전체 레이아웃 끝 -->
+
+    <!-- 푸터 -->
+    <? include "footer.html"?>
+    <!-- // 푸터 -->
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js 연결 -->
+    <script src='./js/header.js'></script>
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/19d7485b13.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

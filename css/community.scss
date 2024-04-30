@@ -1,0 +1,488 @@
+// 파일 연결
+@import './fonts/font.css';
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+$mc: #1E7DFF;
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// community 공통
+.community {
+    width: 80%;
+    margin: 100px auto;
+}
+
+// community 공통 끝
+
+// 타이틀
+.commu-title {
+    @extend %justify-center;
+    margin-top: 100px;
+
+    h3 {
+        font-size: ($ms + 46px);
+        margin: 0;
+    }
+}
+
+// 타이틀 끝
+
+// commu_notice
+.notice {
+    form {
+        width: 100%;
+
+        table {
+            width: 100%;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            text-align: center;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                padding: 15px 5px;
+                font-size: ($ms + 4px);
+                background: #f5f5f5;
+            }
+
+            td {
+                padding: 15px 5px;
+                font-size: ($ms + 4px);
+
+                a {
+                    font-size: ($ms + 4px);
+                }
+            }
+
+            tbody {
+                tr:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.notice-search {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+
+    select,
+    input {
+        height: 30px;
+        padding: 5px;
+        font-size: ($ms + 2px);
+    }
+
+    select {
+        border: none;
+        outline: none;
+        background: #f5f5f5;
+        border-radius: 50px;
+        padding: 5px 10px;
+        margin-right: 10px;
+
+        option {
+            font-size: ($ms + 2px);
+        }
+    }
+
+    input[type=text] {
+        border: none;
+    }
+
+    button {
+        background: none;
+        border: none;
+
+        i {
+            font-size: ($ms + 2px);
+        }
+    }
+}
+
+.notice-search_bar {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.notice-search_btn {
+    position: relative;
+
+    span::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        font-family: "FontAwesome";
+        content: "\f002";
+        color: #000;
+        text-indent: 0;
+    }
+
+    input[type=submit] {
+        background: none;
+        border: none;
+        color: transparent;
+        text-indent: -9999px;
+    }
+}
+
+// commu_notice 끝
+
+// commu_notice_list.html
+
+.list_title {
+
+    h2 {
+        background: #f5f5f5;
+        padding: 15px 10px;
+        font-size: ($ms + 4px);
+        margin: 0;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.list_date {
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+
+    span:first-child {
+        margin-right: 10px;
+    }
+}
+
+.list_cnt {
+    position: relative;
+    padding: 30px 10px;
+
+    p {
+        font-size: ($ms + 4px);
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: $ms;
+        color: #777;
+
+        i {
+            color: #777;
+        }
+    }
+}
+
+.list_link {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #222;
+    padding: 0 10px;
+
+    li {
+        margin-bottom: 10px;
+
+        img {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+
+        strong {
+            @include font-weight('Pretendard-L');
+        }
+
+        a {
+            @extend %align-center;
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+            }
+
+            strong {
+                @include font-weight('Pretendard-L');
+            }
+        }
+    }
+}
+
+.list_others {
+    margin-top: 20px;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 0 7px;
+
+    ul {
+        margin: 10px 0;
+
+        li {
+            @extend %align-center;
+
+            a {
+                line-height: 30px;
+            }
+
+            img {
+                width: 18px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// commu_notice_list.html 끝
+
+// commu_gallery.html
+.gellery-top,
+.gallery_bottom {
+    display: flex;
+    gap: 30px;
+
+    li {
+        width: 100%;
+        height: 400px;
+
+        a {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 300px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+
+            h2 {
+                width: 100%;
+                text-align: left;
+                font-size: ($ms + 4px);
+                @include font-weight('Pretendard-L');
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.gallery-date {
+    color: #777;
+    margin: 0;
+    @include font-weight('Pretendard-L');
+
+    span {
+        i {
+            color: #777;
+        }
+
+        color: #777;
+        @include font-weight('Pretendard-L');
+    }
+}
+
+// commu_gallery.html 끝
+
+// commu_gallery_list.html
+.gallery-img {
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+// commu_gallery_list.html 끝
+
+// 미디어쿼리
+@media screen and (max-width: 1024px) {
+
+    // 타이틀
+    .commu-title {
+        h3 {
+            font-size: 5.86vw;
+        }
+    }
+
+    // 타이틀 끝
+
+    // commu_notice.html
+    .notice {
+        form {
+            table {
+
+                th,
+                td {
+                    font-size: 1.76vw;
+
+                    a {
+                        font-size: 1.76vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .notice-search {
+
+        select,
+        input {
+            font-size: 1.56vw;
+        }
+
+        select {
+            option {
+                font-size: 1.56vw;
+            }
+        }
+    }
+
+    // commu_notice.html 끝
+}
+
+@media screen and (max-width: 768px) {
+
+    // 타이틀
+    .commu-title {
+        margin-top: 13.02vw;
+    }
+
+    // 타이틀 끝
+
+    // commu_notice.html
+    .notice {
+        form {
+            table {
+
+                th,
+                td {
+                    font-size: ($ms - 0.5px);
+
+                    a {
+                        font-size: ($ms - 0.5px);
+                    }
+                }
+            }
+        }
+    }
+
+    .notice-search {
+
+        select,
+        input {
+            font-size: ($ms - 2px);
+        }
+
+        select {
+            option {
+                font-size: ($ms - 2px);
+            }
+        }
+    }
+
+    //commu_notice.html 끝
+}
+
+@media screen and (max-width: 600px) {
+
+    // 타이틀 {
+    .commu-title {
+        margin-top: 78px;
+    }
+
+    // 타이틀 끝
+
+    // commu_notice.html
+    .notice {
+        form {
+            table {
+                tr {
+                    display: flex;
+                    flex-direction: column;
+
+                    td {
+                        border-bottom: 1px solid #ddd;
+                        width: 100%;
+                        display: flex;
+                        position: relative;
+                    }
+
+                    td:nth-child(odd) {
+                        background: #f8f8f8;
+                    }
+
+                    a {
+                        @include font-weight('Pretendard-M');
+                        white-space: normal;
+                        text-align: left;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .notice-search {
+        justify-content: center;
+    }
+
+    // commu_notice.html 끝
+}
+
+@media screen and (max-width: 480px) {
+
+    // 타이틀
+    .commu-title {
+        h3 {
+            font-size: ($ms + 14.2px);
+        }
+    }
+
+    // 타이틀 끝
+
+    // commu_notice.html
+.notice-search_bar {
+
+}
+    // commu_notice.html 끝
+}
+
+// 미디어쿼리 끝

@@ -11,64 +11,12 @@
   justify-content: center;
 }
 
-.top, .institution-logo ul li, .quick, .notice-cnt_date,
+.institution-logo ul li, .quick, .notice-cnt_date,
 .data-cnt_date, .location,
 .status, .company {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-* {
-  font-family: "Pretendard-R";
-  font-size: 14px;
-  letter-spacing: -2px;
-  color: #333;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-body {
-  max-width: 100%;
-  -ms-overflow-style: none;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-ul {
-  padding-left: 0;
-}
-
-a {
-  color: inherit;
-}
-
-span {
-  font-size: inherit;
-}
-
-input {
-  outline: none;
-  letter-spacing: -1;
-}
-
-.hidden {
-  display: none;
-}
-
-.scroll-none {
-  height: 100%;
-  min-height: 100%;
-  overflow: hidden !important;
-  touch-action: none;
 }
 
 .video {
@@ -349,7 +297,7 @@ input {
 }
 .quick ul {
   width: 1270px;
-  gap: 8.75vw;
+  gap: 8.51vw;
   padding-left: 0px;
   text-align: center;
 }
@@ -508,23 +456,6 @@ input {
 }
 .institution-logo ul li img {
   height: 60px;
-}
-
-.top {
-  visibility: hidden;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #333;
-  background: #fff;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1;
-  cursor: pointer;
-}
-.top img {
-  width: 20px;
-  height: 20px;
 }
 
 @media screen and (max-width: 1360px) {
@@ -824,14 +755,6 @@ input {
   .institution-logo ul li img {
     height: 7.81vw;
   }
-  .top {
-    width: 6.51vw;
-    height: 6.51vw;
-  }
-  .top img {
-    width: 3.26vw;
-    height: 3.26vw;
-  }
 }
 @media screen and (max-width: 600px) {
   .video-title {
@@ -888,14 +811,6 @@ input {
     width: 8.33vw;
     height: 8.33vw;
   }
-  .top {
-    width: 39px;
-    height: 39px;
-  }
-  .top img {
-    width: 20px;
-    height: 20px;
-  }
 }
 @media screen and (max-width: 480px) {
   .location a img,
@@ -915,6 +830,11 @@ input {
   .notice-cnt_list a,
   .data-cnt_list a {
     font-size: 12px;
+    display: block;
+    width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .introduce img,
   .call img {

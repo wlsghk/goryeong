@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- css admin -->
+    <link rel="stylesheet" href="./css/ad_fac.css">
+    <link rel="stylesheet" href="./css/ad_style.css">
+    <link rel="stylesheet" href="./css/ad_common.css">
+    <link rel="stylesheet" href="./css/ad_header.css">
+    <!-- css normal -->
+    <link rel="stylesheet" href="/css/common.css">
+    <title>고령2일반산업단지관리공단_관리자</title>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <? include "header.html"?>
+    <!-- // 헤더 -->
+
+    <!-- 전체 레이아웃 -->
+    <div class="ad-wrapper">
+
+        <div class="ad-now">
+            <ul>
+                <li>입주업체 관리&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;입주업체 검색</li>
+            </ul>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="ad-title">
+            <h3>입주업체 관리</h3>
+        </div>
+        <!-- // 타이틀 -->
+
+        <!-- 입주업체 리스트 -->
+        <main class="ad-fac">
+
+            <!-- 검색창 -->
+            <article class="ad-fac_search">
+                <div class="ad-fac_searchbar">
+                    <label for="adFacSearch" class="hidden">입주업체 검색</label>
+                    <select name="" id="">
+                        <option value="1">전체</option>
+                        <option value="2">업체명</option>
+                        <option value="3">대표자</option>
+                        <option value="4">주소</option>
+                        <option value="5">전화번호</option>
+                        <option value="6">주생산품</option>
+                    </select>
+                    <input type="search" name="" id="adFacSearch">
+                    <button type="button">검색</button>
+                </div>
+            </article>
+            <!-- // 검색창 -->
+
+            <form action="">
+                <!-- 카테고리 -->
+                <div class="fac-category">
+                    <ul>
+                        <li class="active">
+                            <a href="#">전체</a>
+                        </li>
+                        <li>
+                            <a href="#">기계</a>
+                        </li>
+                        <li>
+                            <a href="#">전기·전자</a>
+                        </li>
+                        <li>
+                            <a href="#">화학</a>
+                        </li>
+                        <li>
+                            <a href="#">목재·종이</a>
+                        </li>
+                        <li>
+                            <a href="#">인쇄</a>
+                        </li>
+                        <li>
+                            <a href="#">섬유</a>
+                        </li>
+                        <li>
+                            <a href="#">음식류</a>
+                        </li>
+                        <li>
+                            <a href="#">운송장비</a>
+                        </li>
+                        <li>
+                            <a href="#">지원시설</a>
+                        </li>
+                        <li>
+                            <a href="#">기타</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 카테고리 -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>업체명</th>
+                            <th>대표자</th>
+                            <th>주소</th>
+                            <th>전화번호</th>
+                            <th>주생산품</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>제이비소프트</td>
+                            <td>박진보</td>
+                            <td>대구광역시 수성구 동대구로 390</td>
+                            <td>053-000-0000</td>
+                            <td>기계</td>
+                            <td class="last-td">
+                                <a href="./fac_edit.html">수정</a>
+                                <a href="#">삭제</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </main>
+        <!-- // 입주업체 리스트 -->
+    </div>
+    <!-- // 전체 레이아웃 -->
+
+    <!-- 푸터 -->
+    <? include "footer.html"?>
+    <!-- // 푸터 -->
+
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js 연결 -->
+    <script src='./js/header.js'></script>
+</body>
+
+</html>

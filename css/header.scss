@@ -5,6 +5,7 @@
 // nesting
 $ms: 14px;
 $mf: 'Pretendard-R';
+$mc: #1E7DFF;
 
 // 중
 // nesting 끝
@@ -44,14 +45,17 @@ $mf: 'Pretendard-R';
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 
     .logo {
-        @extend %align-center;
-        justify-content: flex-start;
+        a {
+            @extend %align-center;
+            justify-content: flex-start;
+
+            img {
+                margin-left: 40px;
+            }
+        }
+
         @include font-weight('Pretendard-M');
         width: 350px;
-
-        img {
-            margin-left: 40px;
-        }
     }
 
     span {
@@ -93,6 +97,14 @@ $mf: 'Pretendard-R';
                 li {
                     border-bottom: 1px solid #eee;
                     width: 90%;
+
+                    a {
+                        font-size: ($ms + 2px);
+                    }
+
+                    a:hover {
+                        @include font-weight('Pretendard-B');
+                    }
                 }
 
                 li:last-child {
@@ -195,6 +207,18 @@ $mf: 'Pretendard-R';
 
             i {
                 font-size: 21.5px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        .logo {
+            a {
+                img {
+                    margin-left: 8.33vw;
+                }
             }
         }
     }

@@ -62,4 +62,33 @@ $(function () {
         $('.mob-sub').css({ 'display': 'none' });
         $('html, body').removeClass('scroll-none');
     });
+
+    // 서브메뉴 slideDown, slideUP 이벤트
+    $('.subnav-title').mouseover(function () {
+        $(this).find('.subnav-menu_li').stop().slideDown(300);
+    }).mouseout(function () {
+        $(this).find('.subnav-menu_li').stop().slideUp(300);
+    });
+
+    $('.subnav-sub').mouseover(function () {
+        $(this).find('.subnav-menu_li').stop().slideDown(300);
+    }).mouseout(function () {
+        $(this).find('.subnav-menu_li').stop().slideUp(300);
+    });
+
+    if ($(window).width() <= 480) {
+        $('.subnav-sub').on('click', function (e) {
+            if ($(this).siblings('.subnav-menu_li').is(':visible')) {
+                $(this).siblings('.subnav-menu_li').stop().slideUp(300); // 서브메뉴가 열려 있는 경우 닫기
+            } else {
+                $('.subnav-menu_li').stop().slideUp(300); // 다른 서브메뉴 닫기
+                $(this).siblings('.subnav-menu_li').stop().slideDown(300); // 클릭한 서브메뉴 열기
+            }
+        });
+
+        // 모바일 환경에서는 기본 동작 방지
+        $('.subnav-sub .subnav-menu_li').on('click', function (e) {
+            e.stopPropagation(); // 부모 요소의 이벤트 전파 방지
+        });
+    }
 });

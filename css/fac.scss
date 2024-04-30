@@ -1,0 +1,514 @@
+// 파일 연결
+@import './fonts/font.css';
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+$mc: #1E7DFF;
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// fac 공통
+.fac {
+    width: 80%;
+    margin: 100px auto;
+}
+
+// fac 공통 끝
+
+// fac_setup.html
+
+// 타이틀
+.fac-title {
+    @extend %justify-center;
+    margin-top: 100px;
+
+    h3 {
+        font-size: ($ms + 46px);
+        margin: 0;
+    }
+}
+
+// 타이틀 끝
+
+// 가이드
+.guide {
+    .inner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.guide-list {
+    width: 98%;
+    padding: 20px 10px;
+
+    h4 {
+        font-size: ($ms + 11px);
+        margin: 20px 0 0 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    p {
+        font-size: ($ms + 4px);
+        line-height: 30px;
+        margin: 20px 0;
+    }
+}
+
+.guide-icon {
+    @extend %align-center;
+
+    img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: ($ms + 16px);
+        @include font-weight('Pretendard-B');
+    }
+}
+
+// 가이드 끝
+// fac_setup.html 끝
+
+// fac_complete.html
+// 완료
+
+.fac-title_02 {
+    h4 {
+        font-size: ($ms + 14px);
+
+        span {
+            color: #0066FF;
+        }
+    }
+}
+
+.fac-title_02:last-child {
+    margin-top: 50px;
+}
+
+.fac-subtitle {
+    background: #f5f5f5;
+    width: 100%;
+    padding: 30px 20px;
+    line-height: 30px;
+    font-size: ($ms + 4px);
+
+    span {
+        padding-left: 10px;
+        font-size: ($ms + 2px);
+    }
+}
+
+.fac-list {
+    margin-bottom: 50px;
+
+    h4 {
+        font-size: ($ms + 11px);
+        display: block;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin: 50px 30px 20px 30px;
+    }
+
+    div {
+        font-size: ($ms + 4px);
+        line-height: 30px;
+        padding-left: 30px;
+    }
+
+    span {
+        color: #0066FF;
+    }
+}
+
+.download {
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 45px;
+    margin: 0 auto;
+    @include font-weight('Pretendard-M');
+    padding-left: 0 !important;
+    @extend %justify-center;
+    margin-top: 30px;
+
+    a {
+        @extend %flex-center;
+        font-size: ($ms + 6px);
+        width: 100%;
+
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+// 완료 끝
+// fac_complete.html 끝
+
+// fac_report.html
+.report-subtitle {
+    span {
+        color: #0066FF;
+        font-size: ($ms + 4px);
+        padding-left: 0;
+    }
+}
+
+.report-list {
+    h5 {
+        margin: 0;
+        font-size: ($ms + 4px);
+    }
+
+    h5::before {
+        content: '';
+        border: 2px solid #1F8950;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 5px;
+        line-height: 20px;
+    }
+
+    span {
+        color: #0066FF;
+    }
+}
+
+// fac_report.html 끝
+
+// fac_download.html
+.plan-title {
+    h4 {
+        font-size: ($ms + 16px);
+        @include font-weight('Pretendard-B');
+        margin-bottom: 20px;
+    }
+}
+
+.plan-all {
+    margin-top: 80px;
+}
+
+.plan-file {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.plan-file_cnt {
+    position: relative;
+    @extend %align-center;
+
+    img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    h5 {
+        font-size: ($ms + 11px);
+        @include font-weight('Pretendard-L');
+    }
+}
+
+.plan-file_cnt:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.plan-file_cnt:last-child {
+
+}
+
+.plan-download {
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+
+// fac_download.html 끝
+
+// fac_auction.html
+
+// fac_auction.html 끝
+
+// fac_contract.html
+
+// fac_contract.html 끝
+
+// 미디어쿼리
+@media screen and (max-width: 1024px) {
+
+    // 타이틀
+    .fac-title {
+        h3 {
+            font-size: 5.86vw;
+        }
+    }
+
+    // 타이틀 끝
+}
+
+@media screen and (max-width: 768px) {
+
+    // 공통
+    .fac {
+        margin: 13.02vw auto;
+    }
+
+    // 공통 끝
+
+    // 타이틀
+    .fac-title {
+        margin-top: 13.02vw;
+    }
+
+    // 타이틀 끝
+
+    // fac_setup.html
+    // 가이드
+    .guide {
+        .inner {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .guide-icon {
+        img {
+            width: 7.81vw;
+            height: 7.81vw;
+        }
+
+        span {
+            font-size: 3.91vw;
+        }
+    }
+
+    .guide-list {
+        h4 {
+            font-size: 3.26vw;
+            margin-top: 2.60vw;
+            padding-bottom: 2.60vw;
+        }
+
+        p {
+            font-size: 2.34vw;
+            margin: 2.60vw 0;
+            line-height: 3.91vw;
+        }
+    }
+
+    // 가이드 끝
+    // fac_setup.html 끝
+
+    // main
+    .fac-title_02 {
+        h4 {
+            font-size: 3.65vw;
+        }
+    }
+
+    .fac-subtitle {
+        padding: 3.91vw 2.60vw;
+        font-size: 2.34vw;
+        line-height: 3.91vw;
+
+        span {
+            font-size: 2.34vw;
+        }
+    }
+
+    .fac-list {
+        h4 {
+            margin: 6.51vw 3.91vw 2.60vw 3.91vw;
+            padding-bottom: 2.60vw;
+            font-size: 3.26vw;
+        }
+
+        div {
+            font-size: 2.34vw;
+            line-height: 3.91vw;
+            padding-left: 3.91vw;
+        }
+
+        h5 {
+            font-size: 2.34vw;
+        }
+    }
+
+    .download {
+        width: 26.04vw;
+        height: 5.86vw;
+
+        a {
+            font-size: 2.60vw;
+
+            img {
+                width: 3.26vw;
+                height: 3.26vw;
+            }
+        }
+    }
+
+    // main 끝
+}
+
+@media screen and (max-width: 600px) {
+
+    // 공통
+    .fac {
+        margin: 78px auto;
+    }
+
+    // 공통 끝
+
+    // 타이틀 {
+    .fac-title {
+        margin-top: 78px;
+    }
+
+    // 타이틀 끝
+
+    // fac_setup.html
+    // 가이드
+    .guide {
+        margin-top: 78px;
+    }
+
+    .guide-icon {
+        img {
+            width: 47px;
+            height: 47px;
+        }
+
+        span {
+            font-size: ($ms + 9.5px);
+        }
+    }
+
+    .guide-list {
+        h4 {
+            font-size: ($ms + 5.6px);
+        }
+
+        p {
+            margin: 15.6px 0;
+            font-size: $ms;
+            line-height: 25px;
+        }
+    }
+
+    // 가이드 끝
+    // fac_setup.html 끝
+
+    // main
+    .fac-title_02 {
+        h4 {
+            font-size: ($ms + 8px);
+        }
+    }
+
+    .fac-subtitle {
+        padding: 23.5px 15.6px;
+        font-size: $ms;
+        line-height: 22px;
+
+        span {
+            font-size: $ms;
+        }
+    }
+
+    .fac-list {
+        h4 {
+            font-size: ($ms + 5.6px);
+        }
+
+        h5 {
+            font-size: $ms;
+        }
+
+        div {
+            font-size: $ms;
+            line-height: 23px;
+        }
+    }
+
+    .download {
+        width: 154px;
+        height: 33px;
+
+        a {
+            font-size: ($ms + 1.6px);
+
+            img {
+                width: 19.5px;
+                height: 19.5px;
+            }
+        }
+    }
+
+    // main 끝
+}
+
+@media screen and (max-width: 480px) {
+
+    // 타이틀
+    .fac-title {
+        h3 {
+            font-size: ($ms + 14.2px);
+        }
+    }
+
+    // 타이틀 끝
+
+    // main
+    .fac-list {
+
+        // h4 {
+        //     margin: 31.3px 18.8px 2.08vw;
+        // }
+
+        // div {
+        //     padding-left: 18.8px;
+        // }
+    }
+
+    // main 끝
+}
+
+// 미디어쿼리 끝

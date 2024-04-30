@@ -1,0 +1,256 @@
+// 파일 연결
+@import './fonts/font.css';
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+$mc: #1E7DFF;
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// area 공통
+.area {
+    width: 80%;
+    margin: 100px auto;
+}
+
+// area 공통 끝
+
+// 타이틀
+.area-title {
+    @extend %justify-center;
+    margin-top: 100px;
+
+    h3 {
+        font-size: ($ms + 46px);
+        margin: 0;
+    }
+}
+
+// 타이틀 끝
+
+// area_search.html
+
+// 입주업체 리스트
+.area-list {
+    display: flex;
+    flex-direction: column;
+
+    form {
+        table {
+            width: 100%;
+            text-align: center;
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            th,
+            td {
+                font-size: ($ms + 4px);
+                padding: 15px 10px;
+            }
+
+            th {
+                @include font-weight('Pretendard-L');
+                border-bottom: 2px solid #ddd;
+                background: #f5f5f5;
+            }
+
+            td {
+                line-height: 25px;
+                border-right: 1px solid #ddd;
+            }
+        }
+    }
+}
+
+// 카테고리
+.area-category {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        justify-content: start;
+        gap: 10px;
+        margin-bottom: 20px;
+        grid-auto-flow: row;
+
+        li {
+            background: #ddd;
+            padding: 10px 20px;
+            border-radius: 50px;
+            width: 100px;
+            text-align: center;
+
+            a {
+                font-size: ($ms + 2px);
+                @include font-weight('Pretendard-M');
+            }
+        }
+
+        li.active {
+            background: #222;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// 카테고리 끝
+
+.last-td {
+    border-right: none !important;
+
+    a {
+        font-size: ($ms + 4px);
+        padding: 5px 8px;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    a:hover {
+        @include font-weight('Pretendard-SB');
+    }
+
+    a:first-child {
+        margin-right: 5px;
+        background: $mc;
+    }
+
+    a:first-child:hover {
+        background: #3788fa;
+    }
+
+    a:last-child {
+        background: #1F8950;
+    }
+
+    a:last-child:hover {
+        background: #2ca062;
+    }
+}
+
+// 검색창
+.area-search {
+    margin-bottom: 100px;
+    background: #f5f5f5;
+    padding: 50px 30px;
+    border-radius: 10px;
+
+    h2 {
+        font-size: ($ms + 26px);
+        margin: 0 0 20px;
+    }
+}
+
+.area-searchbar {
+    display: flex;
+
+    select,
+    input,
+    button {
+        font-size: ($ms + 2px);
+        border: 1px solid #ddd;
+        padding: 10px;
+        height: 40px;
+    }
+}
+
+// 검색창 끝
+// 입주업체 리스트 끝
+// area_search.html 끝
+
+// 미디어쿼리
+@media screen and (max-width: 1024px) {
+
+    // 타이틀
+    .area-title {
+        h3 {
+            font-size: 5.86vw;
+        }
+    }
+
+    // 타이틀 끝
+
+    // area_search.html
+    // 카테고리
+    .area-category {
+        ul {
+            li {
+                width: 9.77vw;
+                padding: 0.98vw 1.95vw;
+
+                a {
+                    font-size: 1.56vw;
+                }
+            }
+        }
+    }
+
+    // 카테고리 끝
+    // area_search.html 끝
+}
+
+@media screen and (max-width: 768px) {
+
+    // 타이틀
+    .area-title {
+        margin-top: 13.02vw;
+    }
+
+    // 타이틀 끝
+}
+
+@media screen and (max-width: 600px) {
+
+    // 타이틀 {
+    .area-title {
+        margin-top: 78px;
+    }
+
+    // 타이틀 끝
+}
+
+@media screen and (max-width: 480px) {
+
+    // 타이틀
+    .area-title {
+        h3 {
+            font-size: ($ms + 14.2px);
+        }
+    }
+
+    // 타이틀 끝
+}
+
+// 미디어쿼리 끝

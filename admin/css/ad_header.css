@@ -1,0 +1,123 @@
+@import url("../../css/fonts/font.css");
+.admin-info, .header .nav > ul, .header .logo a, .header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  z-index: 99;
+  border-bottom: 1px solid #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  margin: 0;
+  height: 100%;
+  font-family: "Pretendard-M";
+  width: 350px;
+}
+.header .logo a {
+  justify-content: flex-start;
+  height: 100%;
+}
+.header .logo a img {
+  margin-left: 20px;
+}
+.header span {
+  font-size: 20px;
+  z-index: 999;
+  color: #fff;
+}
+.header .nav {
+  flex: 1;
+  z-index: 999;
+  background: #fff;
+}
+.header .nav > ul {
+  margin: 0;
+  height: 100% !important;
+}
+.header .nav > ul > li {
+  position: relative;
+}
+.header .nav > ul > li:first-child {
+  margin-left: 30px;
+}
+.header .nav > ul > li::after {
+  content: "|";
+  padding: 0 30px;
+  color: #ddd;
+  font-size: 16px;
+}
+.header .nav > ul > li::last-child::after {
+  content: "";
+}
+.header .nav > ul .mainmenu {
+  font-size: 18px;
+  font-family: "Pretendard-M";
+}
+.header .nav > ul .submenu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  top: 38px;
+  left: -30px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  line-height: 40px;
+  width: 150px;
+  padding: 3px 15px;
+  display: none;
+  background: #fff;
+}
+.header .nav > ul .submenu li {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+.header .nav > ul .submenu li a {
+  font-size: 16px;
+}
+.header .nav > ul .submenu li a:hover {
+  font-family: "Pretendard-B";
+}
+.header .nav > ul .submenu li:last-child {
+  border-bottom: none;
+}
+.header .nav .hamburger {
+  display: none;
+}
+
+.admin {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+  background: #333;
+}
+.admin h2 {
+  font-family: "Pretendard-L";
+  font-size: 16px;
+  color: #fff;
+}
+.admin h2 span {
+  font-family: "Pretendard-B";
+  font-size: 16px;
+  color: #fff;
+}
+.admin p a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.admin-info {
+  gap: 10px;
+}/*# sourceMappingURL=ad_header.css.map */

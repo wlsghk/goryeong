@@ -1,0 +1,82 @@
+@import url("../../css/fonts/font.css");
+.ad-wrapper_02 {
+  margin-top: 170px !important;
+  margin-bottom: 0 !important;
+}
+
+.ad-hello {
+  margin-bottom: 40px;
+}
+.ad-hello h2 {
+  font-size: 30px;
+  margin: 0;
+  font-family: "Pretendard-L";
+}
+.ad-hello h2 span {
+  font-family: "Pretendard-EB";
+  font-size: 32px;
+}
+
+.ad-main_top,
+.ad-main_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.ad-main_top {
+  padding-bottom: 40px;
+}
+
+.ad-main_line {
+  border-bottom: 1px solid #ddd;
+  margin: 0 30px;
+}
+
+.ad-main_bottom {
+  padding-top: 40px;
+}
+
+.ad-main_box {
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  width: 23%;
+  height: 220px;
+  padding: 20px;
+}
+
+.main-box_title {
+  margin-top: 10px;
+  font-size: 23px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 20px;
+  text-align: center;
+  font-family: "Pretendard-M";
+}
+.main-box_title span {
+  font-family: "Pretendard-SB";
+}
+
+.main-box_cnt {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 21px;
+}
+.main-box_cnt span {
+  font-family: "Pretendard-SB";
+  font-size: 30px;
+}
+
+.main-box_flex {
+  padding-top: 20px;
+}
+.main-box_flex div {
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+}
+.main-box_flex div span {
+  font-family: "Pretendard-R";
+  font-size: 21px;
+}/*# sourceMappingURL=ad_style.css.map */

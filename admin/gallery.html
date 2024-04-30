@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- css admin -->
+    <link rel="stylesheet" href="./css/ad_style.css">
+    <link rel="stylesheet" href="./css/ad_common.css">
+    <link rel="stylesheet" href="./css/ad_notice.css">
+    <link rel="stylesheet" href="./css/ad_board.css">
+    <link rel="stylesheet" href="./css/ad_header.css">
+    <!-- css normal -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <title>고령2일반산업단지관리공단_관리자</title>
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <? include "header.html"?>
+    <!-- // 헤더 -->
+
+    <!-- 전체 레이아웃 -->
+    <div class="ad-wrapper">
+
+        <div class="ad-now">
+            <ul>
+                <li>게시판 관리&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;갤러리</li>
+            </ul>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="ad-title">
+            <h3>갤러리</h3>
+        </div>
+        <!-- // 타이틀 -->
+
+        <!-- 갤러리 -->
+        <main class="ad-gallery">
+            <div class="inner">
+                <ul class="ad-gallery_top">
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                        <img src="/img/gallery-01.jpg" alt="갤러리 사진">
+                        <h2>2024년도 고령2일반산업단지관리공단</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                            <img src="/img/gallery-02.jpg" alt="갤러리 사진">
+                            <h2>노무법인 업무협약체결</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                            <img src="/img/gallery-03.jpg" alt="갤러리 사진">
+                            <h2>공공기관 유치를 위한 챌린지 동참</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                </ul>
+                <ul class="ad-gallery_bottom">
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                            <img src="/img/gallery-01.jpg" alt="갤러리 사진">
+                            <h2>이웃돕기 전달식 (2023. 12. 18)</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                            <img src="/img/gallery-02.jpg" alt="갤러리 사진">
+                            <h2>2024년도 고령2일반산업단지관리공단</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <input type="checkbox" id="adCheck">
+                            <label for="adCheck" class="hidden">체크박스</label>
+                        </div>
+                        <a href="./gallery_list.html">
+                            <img src="/img/gallery-03.jpg" alt="갤러리 사진">
+                            <h2>공공기관 유치를 위한 챌린지 동참</h2>
+                        </a>
+                        <h3 class="ad-gallery_date">관리자
+                            <span>
+                                &nbsp;&nbsp;<i class="xi-calendar"></i>
+                                2024-04-29
+                            </span>
+                        </h3>
+                    </li>
+                </ul>
+
+                <div class="notice-write">
+                    <a href="./gallery_write.html">글쓰기</a>
+                    <a href="#"> 삭제</a>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="page-btn">
+                    <a href="#">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                    <strong class="clicked">
+                        <a href="#">1</a>
+                    </strong>
+                    <a href="#">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+                <!-- 페이지 네이션 끝 -->
+
+            </div>
+        </main>
+        <!-- // 갤러리 -->
+
+        <!-- 탑 버튼 -->
+        <div class="top" onclick="window.scrollTo(0, 0);">
+            <img src="/img/icon/top.png" alt="탑 버튼 이미지">
+        </div>
+        <!-- // 탑 버튼 -->
+    </div>
+    <!-- 전체 레이아웃 끝 -->
+
+    <!-- 푸터 -->
+    <? include "footer.html"?>
+    <!-- // 푸터 -->
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js 연결 -->
+    <script src='./js/header.js'></script>
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/19d7485b13.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

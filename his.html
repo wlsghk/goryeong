@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .history {
+            overflow: hidden;
+            padding: 10px;
+            line-height: 1.3;
+        }
+
+        .history .inner {
+            position: relative;
+            width: 50%;
+            padding: 20px 0;
+        }
+
+        .history .inner::after {
+            position: absolute;
+            top: 0;
+            right: -2px;
+            display: block;
+            content: "";
+            width: 4px;
+            height: 100%;
+            border-radius: 4px;
+            background-color: #ddd;
+            z-index: -1;
+        }
+
+        .history .inner .history-box {
+            position: relative;
+            display: flex;
+        }
+
+        .history .inner .history-left {
+            justify-content: flex-end;
+        }
+
+        .history .inner .history-right {
+            left: 100%;
+        }
+
+        .history .inner .history-box::after {
+            position: absolute;
+            top: 30px;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .history .inner .history-left::after {
+            right: -10px;
+            background-color: #0066FF;
+        }
+
+        .history .inner .history-right::after {
+            left: -10px;
+            background-color: #0066FF;
+        }
+
+        .history .inner .history-box {
+            position: relative;
+        }
+
+        .history .inner .history-box .history-cnt {
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .history .inner .history-left .history-cnt {
+            margin: 20px 25px 20px 20px;
+        }
+
+        .history .inner .history-right .history-cnt {
+            margin: 20px 20px 20px 25px;
+        }
+
+        .history .inner .history-box .history-cnt::before {
+            position: absolute;
+            top: 29px;
+            z-index: -1;
+        }
+
+        .history .inner .history-left .history-cnt::before {
+            right: 15px;
+            content: "─";
+        }
+
+        .history .inner .history-right .history-cnt::before {
+            left: 15px;
+            content: "─";
+        }
+
+        .history .inner .history-box .history-date {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .history .inner .history-left .history-date {
+            left: calc(100% + 15px);
+        }
+
+        .history .inner .history-right .history-date {
+            right: calc(100% + 15px);
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="history">
+        <div class="inner">
+            <div class="history-box history-left">
+                <h4 class="history-date">2024</h4>
+                <p class="history-cnt">연혁 내용 내용 내용</p>
+            </div>
+            <div class="history-box history-right">
+                <h4 class="history-date">2023</h4>
+                <p class="history-cnt">연혁 내용 내용 내용</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -224,7 +224,7 @@ window.onload = function () {
                     <div class="quick-top">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="./area_layout.html">
                                     <figure>
                                         <img src="./img/icon/building.png" alt="입주업체 배치도 아이콘">
                                     </figure>
@@ -232,7 +232,7 @@ window.onload = function () {
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./commu_employ.html">
                                     <figure>
                                         <img src="./img/icon/apply.png" alt="구인/구직 아이콘">
                                     </figure>
@@ -240,7 +240,7 @@ window.onload = function () {
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./fac_contract.html">
                                     <figure>
                                         <img src="./img/icon/sign.png" alt="입주계약/계약변경 아이콘">
                                     </figure>
@@ -252,7 +252,7 @@ window.onload = function () {
                         <div class="quick-bottom">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="./fac_download.html">
                                         <figure>
                                             <img src="./img/icon/paper.png" alt="민원서식 다운로드 아이콘">
                                         </figure>
@@ -260,7 +260,7 @@ window.onload = function () {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="./commu_faq.html">
                                         <figure>
                                             <img src="./img/icon/faq.png" alt="FAQ 아이콘">
                                         </figure>
@@ -277,7 +277,7 @@ window.onload = function () {
                     <h2 class="hidden">바로가기</h2>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="./area_layout.html">
                                 <figure>
                                     <img src="./img/icon/building.png" alt="입주업체 배치도 아이콘">
                                 </figure>
@@ -285,7 +285,7 @@ window.onload = function () {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./commu_employ.html">
                                 <figure>
                                     <img src="./img/icon/apply.png" alt="구인/구직 아이콘">
                                 </figure>
@@ -293,7 +293,7 @@ window.onload = function () {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./fac_contract.html">
                                 <figure>
                                     <img src="./img/icon/sign.png" alt="입주계약/계약변경 아이콘">
                                 </figure>
@@ -301,7 +301,7 @@ window.onload = function () {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./fac_download.html">
                                 <figure>
                                     <img src="./img/icon/paper.png" alt="민원서식 다운로드 아이콘">
                                 </figure>
@@ -309,7 +309,7 @@ window.onload = function () {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./commu_faq.html">
                                 <figure>
                                     <img src="./img/icon/faq.png" alt="FAQ 아이콘">
                                 </figure>

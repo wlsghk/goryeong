@@ -1,0 +1,59 @@
+@import url("../../css/fonts/font.css");
+.ad-gallery_top,
+.ad-gallery_bottom {
+  display: flex;
+  gap: 30px;
+}
+.ad-gallery_top li,
+.ad-gallery_bottom li {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.ad-gallery_top li .check,
+.ad-gallery_bottom li .check {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: white;
+}
+.ad-gallery_top li a,
+.ad-gallery_bottom li a {
+  width: 100%;
+  height: 100%;
+}
+.ad-gallery_top li a img,
+.ad-gallery_bottom li a img {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.ad-gallery_top li a h2,
+.ad-gallery_bottom li a h2 {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Pretendard-L";
+  margin-bottom: 10px;
+}
+
+.ad-gallery_date {
+  color: #777;
+  margin: 0;
+  font-family: "Pretendard-L";
+}
+.ad-gallery_date span {
+  color: #777;
+  font-family: "Pretendard-L";
+}
+.ad-gallery_date span i {
+  color: #777;
+}
+
+.gallery-img {
+  margin-top: 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=ad_board.css.map */

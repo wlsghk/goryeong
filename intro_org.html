@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- css all -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/fac.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>고령2일반산업단지관리공단</title>
+</head>
+
+<body>
+    <!-- 모바일 네비게이션 -->
+    <? include "nav.html"?>
+    <!-- // 모바일 네비게이션 -->
+
+    <!-- 전체 레이아웃 -->
+    <div class="wrapper">
+        <!-- 헤더 -->
+        <? include "header.html"?>
+        <!-- // 헤더 -->
+        <!-- 배경 -->
+        <article class="background">
+            <!-- 이미지 css 삽입 -->
+            <h2>관리공단소개</h2>
+        </article>
+        <!-- // 배경 -->
+        <!-- 서브메뉴 -->
+        <aside class="sublist">
+            <nav class="subnav">
+                <ul>
+                    <li class="home">
+                        <a href="./index.html">
+                            <i class="xi-home"></i>
+                        </a>
+                    </li>
+                    <li class="subnav-title">
+                        <ul class="subnav-left subnav-menu">
+                            <li>
+                                <a href="#">관리공단소개</a>
+                                <ul class="subnav-menu_li">
+                                    <li>
+                                        <a href="#">산업단지현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="active">근로자종합복지관</a>
+                                    </li>
+                                    <li>
+                                        <a href="./fac_setup.html">공장설립절차안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">커뮤니티</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="subnav-right">
+                            <li>
+                                <button type="button" class="select-btn">
+                                    <img src="./img/icon/down.png" alt="메뉴 선택 버튼">
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="subnav-sub">
+                        <ul>
+                            <li>
+                                <a href="#" class="active">조직/기능</a>
+                                <ul class="subnav-menu_li">
+                                    <li>
+                                        <a href="./intro_org.html">인사말(프로필)</a>
+                                    </li>
+                                    <li>
+                                        <a href="./intro_show.html">공단소개</a>
+                                    </li>
+                                    <li><a href="./intro_history.html">목적 및 연혁</a></li>
+                                    <li>
+                                        <a href="./intro_pr.html">홍보영상</a>
+                                    </li>
+                                    <li>
+                                        <a href="./intro_location.html">찾아오시는 길</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="subnav-right">
+                            <li>
+                                <button type="button" class="select-btn">
+                                    <img src="./img/icon/down.png" alt="메뉴 선택 버튼">
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- // 서브메뉴 -->
+        <!-- 타이틀 -->
+        <div class="fac-title">
+            <h3>조직/기능</h3>
+        </div>
+        <!-- // 타이틀 -->
+        <!-- 공단소개 -->
+        <main class="profile intro">
+            <div class="inner">
+            </div>
+        </main>
+        <!-- // 공단소개 -->
+
+                <!-- 푸터 -->
+                <? include "footer.html"?>
+                <!-- // 푸터 -->
+
+        <!-- 탑 버튼 -->
+        <div class="top" onclick="window.scrollTo(0, 0);">
+            <img src="./img/icon/top.png" alt="탑 버튼 이미지">
+        </div>
+        <!-- // 탑 버튼 -->
+    </div>
+    <!-- 전체 레이아웃 끝 -->
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- jQuery.js -->
+    <script src="./js/jQuery.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

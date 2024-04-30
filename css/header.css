@@ -1,5 +1,5 @@
 @import './fonts/font.css';
-.header .nav > ul, .header .logo, .header {
+.header .nav > ul, .header .logo a, .header {
   display: flex;
   align-items: center;
 }
@@ -14,11 +14,13 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 .header .logo {
-  justify-content: flex-start;
   font-family: "Pretendard-M";
   width: 350px;
 }
-.header .logo img {
+.header .logo a {
+  justify-content: flex-start;
+}
+.header .logo a img {
   margin-left: 40px;
 }
 .header span {
@@ -56,6 +58,12 @@
 .header .nav > ul .submenu li {
   border-bottom: 1px solid #eee;
   width: 90%;
+}
+.header .nav > ul .submenu li a {
+  font-size: 16px;
+}
+.header .nav > ul .submenu li a:hover {
+  font-family: "Pretendard-B";
 }
 .header .nav > ul .submenu li:last-child {
   border-bottom: none;
@@ -126,5 +134,10 @@
   }
   .nav .hamburger i {
     font-size: 21.5px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .logo a img {
+    margin-left: 8.33vw;
   }
 }/*# sourceMappingURL=header.css.map */

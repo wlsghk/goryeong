@@ -1,0 +1,334 @@
+@charset "UTF-8";
+@import './fonts/font.css';
+.location-list {
+  display: flex;
+  align-items: center;
+}
+
+.intro {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.profile .inner {
+  display: flex;
+}
+
+.profile-img {
+  width: 430px;
+  height: 600px;
+  background: red;
+}
+.profile-img img {
+  width: inherit;
+  height: inherit;
+}
+
+.profile-txt {
+  padding: 20px 30px;
+  font-size: 20px;
+  line-height: 30px;
+  position: relative;
+}
+
+.profile-title {
+  font-size: 25px;
+  font-family: "Pretendard-SB";
+}
+
+.profile-name {
+  font-size: 25px;
+  font-family: "Pretendard-M";
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+.location #map {
+  border: 1px solid #ddd !important;
+}
+
+.location-cnt {
+  border: 1px solid #ddd;
+  padding: 20px 30px;
+}
+.location-cnt h4 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin: 10px 0px 20px 0px;
+}
+
+.location-list {
+  margin-top: 10px;
+}
+.location-list img {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+.location-list p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.goal {
+  margin-bottom: 50px;
+}
+
+.history {
+  overflow: hidden;
+  padding: 10px;
+  line-height: 1.3;
+}
+.history .inner {
+  position: relative;
+  width: 50%;
+  padding: 20px 0;
+}
+.history .inner::after {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  display: block;
+  content: "";
+  width: 2.5px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #ddd;
+  z-index: -1;
+}
+
+.history-box {
+  position: relative;
+  display: flex;
+}
+
+.history-box::after {
+  position: absolute;
+  top: 30px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.history-left {
+  justify-content: flex-end;
+}
+.history-left .history-cnt {
+  margin: 20px 25px 20px 20px;
+}
+.history-left .history-cnt span {
+  margin-left: 20px;
+}
+.history-left .history-cnt::before {
+  right: 15px;
+  content: "━";
+  color: #ddd;
+}
+.history-left .history-date {
+  left: calc(100% + 15px);
+}
+
+.history-left::after {
+  right: -10px;
+  background-color: #0066FF;
+}
+
+.history-right {
+  left: 100%;
+}
+.history-right .history-cnt {
+  margin: 20px 20px 20px 25px;
+}
+.history-right .history-cnt span {
+  margin-right: 20px;
+}
+.history-right .history-cnt::before {
+  left: 15px;
+  content: "━";
+  color: #ddd;
+}
+.history-right .history-date {
+  right: calc(100% + 15px);
+  text-align: right;
+}
+
+.history-right::after {
+  left: -7px;
+  background-color: #0066FF;
+}
+
+.history-cnt {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.history-cnt span {
+  font-family: "Pretendard-SB";
+}
+
+.history-cnt::before {
+  position: absolute;
+  top: 29px;
+  z-index: -1;
+}
+
+.history-date {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  font-size: 25px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1360px) {
+  .profile-img {
+    width: 31.62vw;
+    height: 44.12vw;
+  }
+  .profile-title {
+    font-size: 1.84vw;
+  }
+  .profile-txt {
+    font-size: 1.47vw;
+    line-height: 2.21vw;
+  }
+  .profile-name {
+    font-size: 1.84vw;
+  }
+  #map {
+    height: 36.76vw !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .history-box h4 {
+    font-size: 2.44vw;
+  }
+  .history-box::after {
+    top: 2.93vw;
+    width: 1.95vw;
+    height: 1.95vw;
+  }
+  .history-cnt {
+    font-size: 1.95vw;
+  }
+  .history-cnt::before {
+    top: 2.83vw;
+  }
+  .history-left .history-cnt {
+    padding-top: 0.98vw;
+    margin-top: 1.95vw;
+  }
+  .history-right .history-cnt {
+    margin-top: 1.95vw;
+    padding-top: 0.98vw;
+  }
+  .profile .inner {
+    flex-direction: column;
+  }
+  .profile-img {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .profile-title {
+    font-size: 19px;
+  }
+  .profile-txt {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 20px 0;
+  }
+  .profile-name {
+    font-size: 19px;
+    bottom: 0;
+  }
+  .fac-title_02 h4 {
+    font-size: 2.73vw;
+    margin-bottom: 1.95vw;
+    padding-bottom: 1.95vw;
+  }
+  .location-list {
+    margin-top: 0.98vw;
+  }
+  .location-list img {
+    width: 2.44vw;
+    height: 2.44vw;
+  }
+  .location-list p {
+    font-size: 1.95vw;
+    margin: 0.98vw 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .history .inner::before {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    display: block;
+    content: "";
+    width: 2.5px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #ddd;
+    z-index: -1;
+  }
+  .history .inner::after {
+    width: 0px;
+  }
+  .history-right {
+    left: 0;
+  }
+  .intro {
+    margin: 13.02vw auto;
+  }
+  #map {
+    height: 282px !important;
+  }
+  .fac-title_02 h4 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .location-list {
+    margin-top: 7.5px;
+  }
+  .location-list img {
+    width: 18.8px;
+    height: 18.8px;
+  }
+  .location-list p {
+    font-size: 15px;
+    margin: 7.5px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile-title,
+  .profile-name {
+    font-size: 3.17vw;
+  }
+  .profile-txt {
+    font-size: 2.5vw;
+    line-height: 4.17vw;
+  }
+  .intro {
+    margin: 78px auto;
+  }
+  .location-cnt {
+    padding: 3.33vw 5vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile-title,
+  .profile-name {
+    font-size: 15.3px;
+  }
+  .profile-txt {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .location-cnt {
+    padding: 16px 24px;
+  }
+}/*# sourceMappingURL=intro.css.map */

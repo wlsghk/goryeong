@@ -13,6 +13,7 @@
     <!-- normalize.css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- css all -->
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -21,279 +22,15 @@
 </head>
 
 <body>
-    <div class="mob-wrapper">
-        <nav class="mob-nav">
-            <!-- 닫기 버튼 -->
-            <div class="close-btn">
-                <a href="#">
-                    <img src="./img/icon/close.png" alt="네비게이션 닫기 버튼"></a>
-            </div>
-            <!-- // 닫기 버튼 -->
-            <ul>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>관리공단소개</span>
-                        <span>
-                            <img src="./img/icon/down.png">
-                        </span>
-                    </a>
-                    <ul class="mob-sub">
-                        <li class="mob-sub_list"><a href="#">인사말(프로필)</a></li>
-                        <li class="mob-sub_list">
-                            <a href="#">공단소개</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">목적 및 연혁</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">조직/기능</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">홍보영상</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">찾아오시는 길</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>산업단지현황</span>
-                        <span>
-                            <img src="./img/icon/down.png">
-                        </span>
-                    </a>
-                    <ul class="mob-sub">
-                        <li class="mob-sub_list">
-                            <a href="#">일반현황</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">입주업체 배치도</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">입주업체 검색</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>근로자종합복지관</span>
-                        <span>
-                            <img src="./img/icon/down.png">
-                        </span>
-                    </a>
-                    <ul class="mob-sub">
-                        <li class="mob-sub_list">
-                            <a href="#">헬스장</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">탁구장</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">외국인</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">근로자 한국교실</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>공장설립절차안내</span>
-                        <span>
-                            <img src="./img/icon/down.png">
-                        </span>
-                    </a>
-                    <ul class="mob-sub">
-                        <li class="mob-sub_list">
-                            <a href="#">공장설립절차</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">입주계약/계약변경</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">공장설립 완료 및 등록</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">임대 및 처분신고</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">경매 등에 의한 산업용지 취득</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">산업단지관리 기본계획</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">민원서식 다운로드</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>공지사항</span>
-                    </a>
-                </li>
-                <li class="mob-main">
-                    <a href="#" class="mob-line">
-                        <span>구인구직</span>
-                    </a>
-                </li>
-                <li class="mob-main">
-                    <a href="#">
-                        <span>커뮤니티</span>
-                        <span>
-                            <img src="./img/icon/down.png">
-                        </span>
-                    </a>
-                    <ul class="mob-sub">
-                        <li class="mob-sub_list">
-                            <a href="#">
-                                갤러리
-                            </a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">부동산중개업무</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">자료실</a>
-                        </li>
-                        <li class="mob-sub_list">
-                            <a href="#">자유게시판</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <!-- 모바일 네비게이션 -->
+    <? include "nav.html"?>
+    <!-- // 모바일 네비게이션 -->
 
     <!-- 전체 레이아웃 -->
     <div class="wrapper">
 
         <!-- 헤더 -->
-        <header class="header">
-
-            <!-- 로고 -->
-            <h1 class="logo">
-                <img src="./img/logo/logo.png" alt="공단 로고">
-                <span>고령2일반산업단지관리공단</span>
-            </h1>
-            <!-- // 로고 -->
-
-            <!-- 네비게이션 -->
-            <nav class="nav">
-                <ul class="nav-max">
-                    <li>
-                        <a href="#" class="mainmenu">관리공단소개</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">인사말(프로필)</a>
-                            </li>
-                            <li>
-                                <a href="#">공단소개</a>
-                            </li>
-                            <li>
-                                <a href="#">목적 및 연혁</a>
-                            </li>
-                            <li>
-                                <a href="#">조직/기능</a>
-                            </li>
-                            <li>
-                                <a href="#">홍보자료</a>
-                            </li>
-                            <li>
-                                <a href="#">찾아오시는 길</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="mainmenu">산업단지현황</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">일반현황</a>
-                            </li>
-                            <li>
-                                <a href="#">입주업체 배치도</a>
-                            </li>
-                            <li>
-                                <a href="#">입주업체 검색</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="mainmenu">근로자종합복지관</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">헬스장</a>
-                            </li>
-                            <li>
-                                <a href="#">탁구장</a>
-                            </li>
-                            <li>
-                                <a href="#">외국인근로자 한글교실</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="mainmenu">공장설립절차안내</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">공장설립절차</a>
-                            </li>
-                            <li>
-                                <a href="#">입주계약/계약변경</a>
-                            </li>
-                            <li>
-                                <a href="#">공장설립 완료 및 등록</a>
-                            </li>
-                            <li>
-                                <a href="#">임대 및 처분신고</a>
-                            </li>
-                            <li>
-                                <a href="#">경매 드에 의한 산업용지 취득</a>
-                            </li>
-                            <li>
-                                <a href="#">산업단지관리 기본계획</a>
-                            </li>
-                            <li>
-                                <a href="#">민원서식 다운로드</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="mainmenu">커뮤니티</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">공지사항</a>
-                            </li>
-                            <li>
-                                <a href="#">구인/구직</a>
-                            </li>
-                            <li>
-                                <a href="#">갤러리</a>
-                            </li>
-                            <li>
-                                <a href="#">부동산중개업무</a>
-                            </li>
-                            <li>
-                                <a href="#">자료실</a>
-                            </li>
-                            <li>
-                                <a href="#">FAQ</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="hamburger">
-                    <li>
-                        <a href="#">
-                            <i class="xi-align-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- // 네비게이션 -->
-
-        </header>
+        <? include "header.html"?>
         <!-- // 헤더 -->
 
         <!-- 메인 동영상 -->
@@ -329,14 +66,14 @@
                     </div>
                     <div class="info-middle">
                         <div class="location">
-                            <a href="#">
+                            <a href="./area_layout.html">
                                 <img src="./img/icon/location.png" alt="입주업체 배치도 아이콘">
                                 <h3>입주업체 배치도</h3>
                             </a>
                         </div>
                         <div class="status">
-                            <a href="#">
-                                <img src="./img/icon/factory.png" alt="">
+                            <a href="./area_normal.html">
+                                <img src="./img/icon/factory.png" alt="일반현황 아이콘">
                                 <h3>일반현황</h3>
                             </a>
                         </div>
@@ -621,52 +358,7 @@
         <!-- // 메인 -->
 
         <!-- 푸터 -->
-        <footer class="footer">
-            <h1 class="footer-logo">
-                <img src="./img/logo/logo.png" alt="고령2일반산업단지 로고">
-                <span>고령2일반산업단지관리공단</span>
-            </h1>
-            <div class="footer-info">
-                <ul>
-                    <li><a href="#">개인정보처리방침</a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></li>
-                    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;저작권정책</a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span>
-                    </li>
-                    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일자동수집거부</a></li>
-                </ul>
-                <address>주소: 경북 고령군 다산면 다산산단3길 10-9<br>TEL: 054-956-9446 / FAX: 054-956-9448</address>
-                <div class="copyright">Copyright 2024. 고령2일반산업단지관리공단 all rights reserved.</div>
-            </div>
-            <div class="footer-go">
-                <select name="" id="" class="official">
-                    <option value="">유관기관 바로가기</option>
-                    <option value="">유관기관 바로가기</option>
-                    <option value="">유관기관 바로가기</option>
-                    <option value="">유관기관 바로가기</option>
-                    <option value="">유관기관 바로가기</option>
-                </select>
-                <select class="normal" onchange="if(this.value) window.open(this.value);">
-                    <option value="">일반산업단지 바로가기</option>
-                    <option value="http://www.da-san.or.kr/default/">고령1일반산업단지관리공단</option>
-                    <option value="http://www.dalin.or.kr/">달성산업단지관리공단</option>
-                    <option value="http://dicox.or.kr/">대덕산업단지관리공단</option>
-                    <option value="https://www.snic.or.kr/">성남산업단지관리공단</option>
-                    <option value="http://www.sjbu.com/">신평장림산업단지공단</option>
-                    <option value="http://www.asicm.or.kr/asicm/index.do">안성산업단지관리공단</option>
-                    <option value="https://wgic.or.kr/">왜관산업단지관리공단</option>
-                    <option value="http://www.seobu.or.kr/">인천서부산업단지공단</option>
-                    <!-- <option value="">인천지방산업단지관리공단</option> -->
-                    <option value="https://phsic.or.kr/www/">포항철강산업단지관리</option>
-                    <option value="http://www.hanamic.or.kr/index.php?">하남산업단지관리공단</option>
-                    <option value="https://cicox.or.kr/">청주산업단지관리공단</option>
-                    <option value="http://www.kiaco.or.kr/">경산산업단지관리공단</option>
-                    <option value="http://www.picm.or.kr/">평택산업단지관리공단</option>
-                    <option value="http://www.chilseo.or.kr/">칠서산업단지관리공단</option>
-                    <option value="http://hamangic.co.kr/">함안산업단지관리공단</option>
-                    <option value="http://www.seongseo.or.kr/">성서산업단지관리공단</option>
-                    <option value="https://www.seodaegu.or.kr/default/00/01.php">서대구산업단지관리공단</option>
-                </select>
-            </div>
-        </footer>
+        <? include "footer.html"?>
         <!-- // 푸터 -->
 
         <!-- 탑 버튼 -->

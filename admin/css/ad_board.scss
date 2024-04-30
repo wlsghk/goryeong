@@ -1,0 +1,100 @@
+// 파일 연결
+@import url('../../css/fonts/font.css');
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+$mc: #1E7DFF;
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// gallery.html
+.ad-gallery_top,
+.ad-gallery_bottom {
+    display: flex;
+    gap: 30px;
+
+    li {
+        width: 100%;
+        height: 400px;
+        position: relative;
+
+        .check {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: white;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 300px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+
+            h2 {
+                width: 100%;
+                text-align: left;
+                font-size: ($ms + 4px);
+                @include font-weight('Pretendard-L');
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.ad-gallery_date {
+    color: #777;
+    margin: 0;
+    @include font-weight('Pretendard-L');
+
+    span {
+        i {
+            color: #777;
+        }
+
+        color: #777;
+        @include font-weight('Pretendard-L');
+    }
+}
+
+// gallery.html 끝
+
+// gallery_list.html
+.gallery-img {
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+// gallery_list.html 끝

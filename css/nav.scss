@@ -5,6 +5,7 @@
 // nesting
 $ms: 14px;
 $mf: 'Pretendard-R';
+$mc: #1E7DFF;
 
 // 중
 // nesting 끝
@@ -31,44 +32,6 @@ $mf: 'Pretendard-R';
 }
 
 // mixin 끝
-
-// 공통
-* {
-    font-family: $mf;
-    font-size: $ms;
-    letter-spacing: -2px;
-    color: #333;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-body {
-    -ms-overflow-style: none;
-    background: #fff;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-ul {
-    padding-left: 0;
-}
-
-a {
-    color: inherit;
-}
-
-span {
-    font-size: inherit;
-}
-
-.hidden {
-    display: none;
-}
-
-// 공통 끝
 
 // 모바일 메뉴
 .mob-wrapper {
@@ -148,12 +111,12 @@ span {
     .mob-main {
         ul {
             li {
-                line-height: 30px;
+                line-height: 27px;
             }
         }
 
         >a {
-            font-size: $ms;
+            font-size: ($ms + 1px);
             line-height: 40px;
 
             img {
@@ -164,7 +127,7 @@ span {
 
     .mob-sub {
         a {
-            font-size: ($ms - 2px);
+            font-size: ($ms - 0.5px);
         }
     }
 

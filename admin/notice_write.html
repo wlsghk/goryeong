@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- css admin -->
+    <link rel="stylesheet" href="./css/ad_style.css">
+    <link rel="stylesheet" href="./css/ad_common.css">
+    <link rel="stylesheet" href="./css/ad_notice.css">
+    <link rel="stylesheet" href="./css/ad_header.css">
+    <!-- css normal -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <title>고령2일반산업단지관리공단_관리자</title>
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <? include "header.html"?>
+    <!-- // 헤더 -->
+
+    <!-- 전체 레이아웃 -->
+    <div class="ad-wrapper">
+
+        <div class="ad-now">
+            <ul>
+                <li>공지사항&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;공지사항 등록</li>
+            </ul>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="ad-title notice-title">
+            <h3>공지사항 등록</h3>
+        </div>
+        <!-- // 타이틀 -->
+
+        <!-- 공지사항 작성 -->
+        <main class="write">
+            <div class="inner">
+                <form action="">
+                    <div class="write-title">
+                        <label for="ntTitle" class="hidden">제목</label>
+                        <input type="text" name="" id="ntTitle" placeholder="제목을 입력하세요">
+                    </div>
+                    <div class="write-cnt">
+                        <label for="ntCnt" class="hidden">내용</label>
+                        <textarea name="" id="ntCnt" cols="30" rows="30" placeholder="내용을 입력하세요"></textarea>
+                    </div>
+
+                    <div class="write-link">
+                        <input class="upload-file_01 upload-name" value="첨부파일" placeholder="첨부파일">
+                        <label for="ntFlie1">파일찾기</label>
+                        <input type="file" id="ntFlie1">
+                    </div>
+                    
+                    <div class="write-link">
+                        <input class="upload-file_02 upload-name" value="첨부파일" placeholder="첨부파일">
+                        <label for="ntFile2">파일찾기</label>
+                        <input type="file" id="ntFile2">
+                    </div>
+
+                    <div class="write-btn">
+                        <a href="#">등록</a>
+                        <a href="javascript:history.back();">이전</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <!-- // 공지사항 작성 -->
+
+        <!-- 탑 버튼 -->
+        <div class="top" onclick="window.scrollTo(0, 0);">
+            <img src="/img/icon/top.png" alt="탑 버튼 이미지">
+        </div>
+        <!-- // 탑 버튼 -->
+    </div>
+    <!-- 전체 레이아웃 끝 -->
+
+    <!-- 푸터 -->
+    <? include "footer.html"?>
+    <!-- // 푸터 -->
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js 연결 -->
+    <script src='./js/header.js'></script>
+    <script src='./js/ad_jQuery.js'></script>
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/19d7485b13.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

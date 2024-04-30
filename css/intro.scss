@@ -1,0 +1,503 @@
+// 파일 연결
+@import './fonts/font.css';
+// 파일 연결 끝
+
+// nesting
+$ms: 14px;
+$mf: 'Pretendard-R';
+$mc: #1E7DFF;
+
+// 중
+// nesting 끝
+
+// mixin
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-weight($fn) {
+    font-family: $fn;
+}
+
+// mixin 끝
+
+// intro 공통
+.intro {
+    width: 80%;
+    margin: 100px auto;
+}
+
+// intro 공통 끝
+
+// intro_profile.html
+// 프로필
+.profile {
+    .inner {
+        display: flex;
+    }
+}
+
+// 프로필 끝
+
+.profile-img {
+    width: 430px;
+    height: 600px;
+    background: red;
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.profile-txt {
+    padding: 20px 30px;
+    font-size: ($ms + 6px);
+    line-height: 30px;
+    position: relative;
+}
+
+.profile-title {
+    font-size: ($ms + 11px);
+    @include font-weight('Pretendard-SB');
+}
+
+.profile-name {
+    font-size: ($ms + 11px);
+    @include font-weight('Pretendard-M');
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+// intro_profile.html 끝
+
+// intro_location.html
+// 위치
+.location {
+    #map {
+        border: 1px solid #ddd !important;
+    }
+}
+
+.location-cnt {
+    border: 1px solid #ddd;
+    padding: 20px 30px;
+
+    h4 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin: 10px 0px 20px 0px;
+    }
+}
+
+.location-list {
+    margin-top: 10px;
+    @extend %align-center;
+
+    img {
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    p {
+        font-size: ($ms + 6px);
+        margin: 10px 0;
+    }
+}
+
+// 위치 끝
+// intro_location.html 끝
+
+// intro_history.html
+.goal {
+    margin-bottom: 50px;
+}
+
+.history {
+    overflow: hidden;
+    padding: 10px;
+    line-height: 1.3;
+
+    .inner {
+        position: relative;
+        width: 50%;
+        padding: 20px 0;
+    }
+
+    .inner::after {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        display: block;
+        content: "";
+        width: 2.5px;
+        height: 100%;
+        border-radius: 4px;
+        background-color: #ddd;
+        z-index: -1;
+    }
+}
+
+.history-box {
+    position: relative;
+    display: flex;
+}
+
+.history-box::after {
+    position: absolute;
+    top: 30px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.history-left {
+    justify-content: flex-end;
+
+    .history-cnt {
+        margin: 20px 25px 20px 20px;
+
+        span {
+            margin-left: 20px;
+        }
+    }
+
+    .history-cnt::before {
+        right: 15px;
+        content: "━";
+        color: #ddd;
+    }
+
+    .history-date {
+        left: calc(100% + 15px);
+    }
+}
+
+.history-left::after {
+    right: -10px;
+    background-color: #0066FF;
+}
+
+.history-right {
+    left: 100%;
+
+    .history-cnt {
+        margin: 20px 20px 20px 25px;
+
+        span {
+            margin-right: 20px;
+        }
+    }
+
+    .history-cnt::before {
+        left: 15px;
+        content: "━";
+        color: #ddd;
+    }
+
+    .history-date {
+        right: calc(100% + 15px);
+        text-align: right;
+    }
+}
+
+.history-right::after {
+    left: -7px;
+    background-color: #0066FF;
+}
+
+.history-cnt {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: ($ms + 6px);
+
+    span {
+        @include font-weight('Pretendard-SB');
+    }
+}
+
+.history-cnt::before {
+    position: absolute;
+    top: 29px;
+    z-index: -1;
+}
+
+.history-date {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    font-size: ($ms + 11px);
+    font-style: italic;
+}
+
+// intro_history.html 끝
+
+// 미디어쿼리
+@media screen and (max-width: 1360px) {
+
+    // intro_profile.html
+    // 프로필
+    .profile-img {
+        width: 31.62vw;
+        height: 44.12vw;
+    }
+
+    .profile-title {
+        font-size: 1.84vw;
+    }
+
+    .profile-txt {
+        font-size: 1.47vw;
+        line-height: 2.21vw;
+    }
+
+    .profile-name {
+        font-size: 1.84vw;
+    }
+
+    // 프로필 끝
+    // intro_profile.html 끝
+
+    // intro_history.html
+    // 위치
+    #map {
+        height: 36.76vw !important;
+    }
+
+    // 위치 끝
+    // intro_history.html 끝
+}
+
+@media screen and (max-width: 1024px) {
+
+    // intro_history.html
+    // 목적/연혁
+    .history-box {
+        h4 {
+            font-size: 2.44vw;
+        }
+    }
+
+    .history-box::after {
+        top: 2.93vw;
+        width: 1.95vw;
+        height: 1.95vw;
+    }
+
+    .history-cnt {
+        font-size: 1.95vw;
+    }
+
+    .history-cnt::before {
+        top: 2.83vw;
+    }
+
+    .history-left {
+        .history-cnt {
+            padding-top: 0.98vw;
+            margin-top: 1.95vw;
+        }
+    }
+
+    .history-right {
+        .history-cnt {
+            margin-top: 1.95vw;
+            padding-top: 0.98vw;
+        }
+
+        // .history-cnt::before {
+        //     left: 1.46vw;
+        // }
+    }
+
+    // 목적/연혁 끝
+    // intro_history.html 끝
+
+    // intro_profile.html
+    // 프로필
+    .profile {
+        .inner {
+            flex-direction: column;
+        }
+    }
+
+    .profile-img {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .profile-title {
+        font-size: ($ms + 5px);
+    }
+
+    .profile-txt {
+        font-size: ($ms + 1px);
+        line-height: 25px;
+        padding: 20px 0;
+    }
+
+    .profile-name {
+        font-size: ($ms + 5px);
+        bottom: 0;
+    }
+
+    // 프로필 끝
+    // intro_profile.html 끝
+
+    // intro_location.html
+    // 위치
+    .fac-title_02 {
+        h4 {
+            font-size: 2.73vw;
+            margin-bottom: 1.95vw;
+            padding-bottom: 1.95vw;
+        }
+    }
+
+    .location-list {
+        margin-top: 0.98vw;
+
+        img {
+            width: 2.44vw;
+            height: 2.44vw;
+        }
+
+        p {
+            font-size: 1.95vw;
+            margin: 0.98vw 0;
+        }
+    }
+
+    // 위치 끝
+    // intro_location.html 끝
+}
+
+@media screen and (max-width: 768px) {
+
+    .history {
+        .inner::before {
+            position: absolute;
+            top: 0;
+            left: -2px;
+            display: block;
+            content: "";
+            width: 2.5px;
+            height: 100%;
+            border-radius: 4px;
+            background-color: #ddd;
+            z-index: -1;
+        }
+
+        .inner::after {
+            width: 0px;
+        }
+    }
+
+    .history-right {
+        left: 0;
+    }
+
+    // intro_location.html
+    .intro {
+        margin: 13.02vw auto;
+    }
+
+    // 위치
+    #map {
+        height: 282px !important;
+    }
+
+    .fac-title_02 {
+        h4 {
+            font-size: ($ms + 7px);
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    .location-list {
+        margin-top: 7.5px;
+
+        img {
+            width: 18.8px;
+            height: 18.8px;
+        }
+
+        p {
+            font-size: ($ms + 1px);
+            margin: 7.5px 0;
+        }
+    }
+
+    // 위치 끝
+    // intro_location.html 끝
+
+}
+
+@media screen and (max-width: 600px) {
+
+    // intro_profile.html
+    .profile-title,
+    .profile-name {
+        font-size: 3.17vw;
+    }
+
+    .profile-txt {
+        font-size: 2.50vw;
+        line-height: 4.17vw;
+    }
+
+    // intro_profile.html 끝
+
+    // intro_locaton.html
+    .intro {
+        margin: 78px auto;
+    }
+
+    .location-cnt {
+        padding: 3.33vw 5vw;
+    }
+
+    // intro_location.html 끝
+}
+
+@media screen and (max-width: 480px) {
+
+    // intro_profile.html
+    .profile-title,
+    .profile-name {
+        font-size: ($ms + 1.3px);
+    }
+
+    .profile-txt {
+        font-size: ($ms - 2px);
+        line-height: 20px;
+    }
+
+    // intro_orifile.html 끝
+
+    // intro_locaton.html
+    .location-cnt {
+        padding: 16px 24px;
+    }
+
+    // intro_location.html 끝
+}
+
+// 미디어쿼리 끝
